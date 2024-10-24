@@ -17,17 +17,17 @@ jobs:
       run: |
         git config --global user.name "GitHub Action"
         git config --global user.email "action@github.com"
-        git remote set-url origin https://x-access-token:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/Santhosh-Sathyamurthy/Santhosh-Sathyamurthy.github.io.git
+        git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/Santhosh-Sathyamurthy/Santhosh-Sathyamurthy.github.io.git
 
-    - name: Get last commit date
+    - name: Get last commit date in 12-hour format
       id: get_last_commit_date
       run: |
-        LAST_MODIFIED=$(git log -1 --format=%cd --date=format:"%H:%M %d-%m-%Y")
+        LAST_MODIFIED=$(git log -1 --format=%cd --date=format:"%I:%M %p %d-%m-%Y")
         echo "LAST_MODIFIED=$LAST_MODIFIED" >> $GITHUB_ENV
 
-    - name: Replace placeholder with last commit date
+    - name: Replace content of span#lastModified with last commit date
       run: |
-        sed -i 's/LAST_MODIFIED_PLACEHOLDER/'"$LAST_MODIFIED"'/g' ./index.html
+        sed -i 's|<span id="lastModified">.*</span>|<span id="lastModified">'"$LAST_MODIFIED"'</span>|g' ./index.html
 
     - name: Commit and push changes
       run: |
