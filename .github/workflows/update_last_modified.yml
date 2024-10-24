@@ -1,4 +1,4 @@
-name: Update Last Modified and Deploy
+name: Update Last Modified
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  update-and-deploy:
+  update-date:
     runs-on: ubuntu-latest
 
     steps:
@@ -34,8 +34,3 @@ jobs:
           git add index.html
           git commit -m "Update last modified date to $LAST_MODIFIED"
           git push origin main
-
-      - name: Build and Deploy
-        run: |
-          # Your build and deployment commands here
-          echo "Building and deploying the site..."
