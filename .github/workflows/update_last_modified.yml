@@ -3,7 +3,7 @@ name: Update Last Modified Date
 on:
   push:
     branches:
-      - main  # or 'master', depending on your default branch
+      - main  # Change if your default branch is something else
 
 jobs:
   update-date:
@@ -12,6 +12,12 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+
+    - name: Set up Git authentication using PAT
+      run: |
+        git config --global user.name "GitHub Action"
+        git config --global user.email "action@github.com"
+        git remote set-url origin https://x-access-token:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/Santhosh-Sathyamurthy/Santhosh-Sathyamurthy.github.io.git
 
     - name: Get last commit date
       id: get_last_commit_date
@@ -23,7 +29,6 @@ jobs:
 
     - name: Commit and push changes
       run: |
-        git config user.name "Santhosh-Sathyamurthy"
-        git config user.email "santhoshsathyamurthy73@gmail.com"
-        git commit -am "Update last modified date to $LAST_MODIFIED"
-        git push
+        git add index.html
+        git commit -m "Update last modified date to $LAST_MODIFIED"
+        git push origin main
