@@ -1,36 +1,41 @@
-name: Update Last Modified Date
+name: Update Last Modified and Deploy
 
 on:
   push:
     branches:
-      - main  # Change if your default branch is something else
+      - main
 
 jobs:
-  update-date:
+  update-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Set up Git authentication using PAT
-      run: |
-        git config --global user.name "GitHub Action"
-        git config --global user.email "action@github.com"
-        git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/Santhosh-Sathyamurthy/Santhosh-Sathyamurthy.github.io.git
+      - name: Set up Git authentication using PAT
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/Santhosh-Sathyamurthy/Santhosh-Sathyamurthy.github.io.git
 
-    - name: Get last commit date in 12-hour format
-      id: get_last_commit_date
-      run: |
-        LAST_MODIFIED=$(git log -1 --format=%cd --date=format:"%I:%M %p %d-%m-%Y")
-        echo "LAST_MODIFIED=$LAST_MODIFIED" >> $GITHUB_ENV
+      - name: Get last commit date in 12-hour format
+        id: get_last_commit_date
+        run: |
+          LAST_MODIFIED=$(git log -1 --format=%cd --date=format:"%I:%M %p %d-%m-%Y")
+          echo "LAST_MODIFIED=$LAST_MODIFIED" >> $GITHUB_ENV
 
-    - name: Replace content of span#lastModified with last commit date
-      run: |
-        sed -i 's|<span id="lastModified">.*</span>|<span id="lastModified">'"$LAST_MODIFIED"'</span>|g' ./index.html
+      - name: Replace content of span#lastModified with last commit date
+        run: |
+          sed -i 's|<span id="lastModified">.*</span>|<span id="lastModified">'"$LAST_MODIFIED"'</span>|g' ./index.html
 
-    - name: Commit and push changes
-      run: |
-        git add index.html
-        git commit -m "Update last modified date to $LAST_MODIFIED"
-        git push origin main
+      - name: Commit and push changes
+        run: |
+          git add index.html
+          git commit -m "Update last modified date to $LAST_MODIFIED"
+          git push origin main
+
+      - name: Build and Deploy
+        run: |
+          # Your build and deployment commands here
+          echo "Building and deploying the site..."
