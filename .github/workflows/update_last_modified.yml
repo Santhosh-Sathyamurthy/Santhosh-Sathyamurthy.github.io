@@ -21,7 +21,9 @@ jobs:
 
     - name: Get last commit date
       id: get_last_commit_date
-      run: echo "LAST_MODIFIED=$(git log -1 --format=%cd --date=iso)" >> $GITHUB_ENV
+      run: |
+        LAST_MODIFIED=$(git log -1 --format=%cd --date=format:"%H:%M %d-%m-%Y")
+        echo "LAST_MODIFIED=$LAST_MODIFIED" >> $GITHUB_ENV
 
     - name: Replace placeholder with last commit date
       run: |
