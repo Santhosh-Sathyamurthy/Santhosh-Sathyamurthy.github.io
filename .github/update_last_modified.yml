@@ -1,0 +1,29 @@
+name: Update Last Modified Date
+
+on:
+  push:
+    branches:
+      - main  # or 'master', depending on your default branch
+
+jobs:
+  update-date:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Get last commit date
+      id: get_last_commit_date
+      run: echo "LAST_MODIFIED=$(git log -1 --format=%cd --date=iso)" >> $GITHUB_ENV
+
+    - name: Replace placeholder with last commit date
+      run: |
+        sed -i 's/LAST_MODIFIED_PLACEHOLDER/'"$LAST_MODIFIED"'/g' ./index.html
+
+    - name: Commit and push changes
+      run: |
+        git config user.name "Santhosh Sathyamurthy"
+        git config user.email "santhoshsathyamurthy73@gmail.com"
+        git commit -am "Update last modified date to $LAST_MODIFIED"
+        git push
