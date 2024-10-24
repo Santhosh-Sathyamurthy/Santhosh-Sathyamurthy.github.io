@@ -1,4 +1,4 @@
-name: Update Last Modified
+name: Custom Update and Deploy to GitHub Pages
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  update-date:
+  update-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -34,3 +34,17 @@ jobs:
           git add index.html
           git commit -m "Update last modified date to $LAST_MODIFIED"
           git push origin main
+
+      - name: Build and Deploy to GitHub Pages
+        run: |
+          # Create a new branch for deployment
+          git checkout -B gh-pages
+          # Remove everything in the current directory (make sure you want this!)
+          rm -rf *
+          # Copy the built files (adjust this to your build command if needed)
+          cp -r ./index.html ./ # If you have other files to deploy, copy them too
+          # Add and commit the changes
+          git add .
+          git commit -m "Deploy to GitHub Pages"
+          # Push to the gh-pages branch
+          git push -f origin gh-pages
