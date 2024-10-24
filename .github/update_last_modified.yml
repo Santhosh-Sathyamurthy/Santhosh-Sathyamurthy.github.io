@@ -23,7 +23,7 @@ jobs:
 
     - name: Commit and push changes
       run: |
-        git config user.name "Santhosh Sathyamurthy"
+        git config user.name "Santhosh-Sathyamurthy"
         git config user.email "santhoshsathyamurthy73@gmail.com"
         git commit -am "Update last modified date to $LAST_MODIFIED"
         git push
