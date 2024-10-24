@@ -1,4 +1,4 @@
-name: Page Build Deployment
+name: GitHub Pages Build and Deployment
 
 on:
   workflow_run:
@@ -17,5 +17,5 @@ jobs:
 
       - name: Build and Deploy
         run: |
-          # Your build and deployment commands here
+          # Your existing build and deployment commands here
           echo "Building and deploying the site..."
