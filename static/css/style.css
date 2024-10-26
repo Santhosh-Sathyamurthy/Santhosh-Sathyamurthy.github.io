@@ -1,5 +1,7 @@
 body {
-    background-color: #1a1a1a;
+    background-image: url('/static/img/backdrop.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
     color: #e0d8c3;
     font-family: 'Cinzel', serif;
     display: flex;
