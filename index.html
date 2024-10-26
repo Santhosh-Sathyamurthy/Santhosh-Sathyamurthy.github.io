@@ -1,87 +1,98 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>La Soireé Scorecard</title>
-<link href="/static/css/style.css" rel="stylesheet"/>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel&amp;display=swap" rel="stylesheet"/>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>La Soireé Scorecard</title>
+    <link href="/static/css/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<h1 class="display-1" style="color: white;">La Soireé '24 - Leaderboard</h1>
-<br>
-<br>
-<p style="color: white;">Last Updated: <span id="lastModified">09:39 AM 26-10-2024</span></p>
-<br>
-<br>
-<div class="scorecard"><table class="table table-dark table-striped table-borderless table-responsive" >
-<p style="color: white;">Last Updated: <span id="lastModified">09:39 AM 26-10-2024</span></p>
-<div class="table-responsive"><table class="table table-dark table-striped table-borderless" >
-<thead>
-<tr>
-<th>Current Rank</th>
-<th>Name</th>
-<th>Score</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Abhijay</td>
-<td>65655</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Aniket</td>
-<td>65464</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Abhishek</td>
-<td>10021</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Abhyuday</td>
-<td>4545</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Anish</td>
-<td>2121</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Anirudh</td>
-<td>2121</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Aniruddha</td>
-<td>1212</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Abinaya</td>
-<td>754</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Abhishek</td>
-<td>545</td>
-</tr>
-<tr>
-<td>10</td>
-<td>Abhishek</td>
-<td>11</td>
-</tr>
-</tbody>
-</table></div>
+
+<body class="bg-dark text-light d-flex flex-column align-items-center">
+    <header class="text-center mt-5">
+        <h1 class="display-1 mb-2" style="font-family: 'Lavishly Yours', cursive; color: #e0c097;">
+            La Soireé '24 - Leaderboard
+        </h1>
+        <p class="lead" style="font-family: 'Rajdhani', sans-serif; color: #d1b6a1;">
+            Last Updated: <span id="lastModified">09:36 AM 26-10-2024</span>
+        </p>
+    </header>
+
+    <div class="container scorecard p-4 mt-4 rounded shadow-lg">
+        <table class="table table-dark table-striped table-hover table-bordered border-primary text-center">
+            <thead class="table-primary">
+                <tr>
+                    <th scope="col" style="font-family: 'Cinzel', serif;">Current Rank</th>
+                    <th scope="col" style="font-family: 'Cinzel', serif;">Name</th>
+                    <th scope="col" style="font-family: 'Cinzel', serif;">Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Abhijay</td>
+                    <td>65655</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Aniket</td>
+                    <td>65464</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Abhishek</td>
+                    <td>10021</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Abhyuday</td>
+                    <td>4545</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Anish</td>
+                    <td>2121</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Anirudh</td>
+                    <td>2121</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Aniruddha</td>
+                    <td>1212</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Abinaya</td>
+                    <td>754</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Abhishek</td>
+                    <td>545</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Abhishek</td>
+                    <td>11</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
+
 </html>
