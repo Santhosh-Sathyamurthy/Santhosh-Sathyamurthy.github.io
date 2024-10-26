@@ -10,7 +10,7 @@ body {
 h1 {
     font-size: 2.5rem;
     font-family: 'Lavishly Yours', cursive;
-    color: #e0c097;
+    color: #9f5d08;
     text-align: center;
 }
 
@@ -20,9 +20,10 @@ h1 {
 }
 
 .scorecard {
-    background-color: rgba(40, 40, 40, 0.9); /* Slightly lighter for better contrast */
+    background-color: rgb(20, 1, 41); /* Slightly lighter for better contrast */
     border-radius: 10px; /* Rounded corners for modern look */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    opacity: 0.7;
 }
 
 th, td {
@@ -46,16 +47,19 @@ tr {
 .rank-1 {
     background: linear-gradient(90deg, rgba(255, 215, 0, 0.9), rgba(255, 215, 0, 0.6)); /* Gold inlay */
     color: #4b3800; /* Dark text for visibility */
+    opacity: 0.8;
 }
 
 .rank-2 {
     background: linear-gradient(90deg, rgba(192, 192, 192, 0.9), rgba(192, 192, 192, 0.6)); /* Silver inlay */
     color: #3d3d3d; /* Dark text for visibility */
+    opacity: 0.8;
 }
 
 .rank-3 {
     background: linear-gradient(90deg, rgba(205, 127, 50, 0.9), rgba(205, 127, 50, 0.6)); /* Bronze inlay */
     color: #3d2800; /* Dark text for visibility */
+    opacity: 0.8;
 }
 
 /* Hover effect for rows */
