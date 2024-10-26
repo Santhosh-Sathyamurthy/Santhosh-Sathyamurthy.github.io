@@ -31,12 +31,13 @@ th, td {
     font-size: 1.2rem; /* Increased font size */
     border: none; /* Remove borders */
     font-weight: bold; /* Make text bold */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Charmonman'; /* Smooth transition */
 }
 
 th {
-    background: linear-gradient(90deg, rgba(60, 60, 60, 0.9), rgba(40, 40, 40, 0.8)); /* Gradient header */
-    color: #e0c097; /* Light color for header text */
+    background: linear-gradient(90deg, rgba(42, 15, 58, 0.9), rgba(48, 2, 72, 0.8)); /* Gradient header */
+    color: #c7a4ff; /* Light color for header text */
 }
 
 tr {
@@ -46,19 +47,19 @@ tr {
 /* Rank Styling */
 .rank-1 {
     background: linear-gradient(90deg, rgba(255, 215, 0, 0.9), rgba(255, 215, 0, 0.6)); /* Gold inlay */
-    color: #4b3800; /* Dark text for visibility */
+    color: #000000; /* Dark text for visibility */
     opacity: 0.8;
 }
 
 .rank-2 {
     background: linear-gradient(90deg, rgba(192, 192, 192, 0.9), rgba(192, 192, 192, 0.6)); /* Silver inlay */
-    color: #3d3d3d; /* Dark text for visibility */
+    color: #000000; /* Dark text for visibility */
     opacity: 0.8;
 }
 
 .rank-3 {
     background: linear-gradient(90deg, rgba(205, 127, 50, 0.9), rgba(205, 127, 50, 0.6)); /* Bronze inlay */
-    color: #3d2800; /* Dark text for visibility */
+    color: #000000; /* Dark text for visibility */
     opacity: 0.8;
 }
 
