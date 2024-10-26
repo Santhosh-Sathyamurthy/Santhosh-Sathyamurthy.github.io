@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>La Soireé Scorecard</title>
-    <link href="/static/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,7 +16,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-dark text-light d-flex flex-column align-items-center">
@@ -27,10 +26,13 @@
         <p class="lead" style="font-family: 'Rajdhani', sans-serif; color: #d1b6a1;">
             Last Updated: <span id="lastModified">09:36 AM 26-10-2024</span>
         </p>
+        <div class="dummy-text">
+            Dummy text goes here to explain the scorecard or provide additional information.
+        </div>
     </header>
 
     <div class="container scorecard mt-3 rounded shadow-lg">
-        <table class="table table-striped table-hover text-center">
+        <table class="text-center" style="width: 100%; color: #ffffff; border-collapse: collapse;">
             <thead>
                 <tr>
                     <th scope="col">Current Rank</th>
@@ -64,10 +66,8 @@
                     <td>Anish</td>
                     <td>2121</td>
                 </tr>
-                <!-- Additional rows as needed -->
             </tbody>
         </table>
     </div>
 </body>
-
 </html>
