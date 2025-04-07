@@ -1,745 +1,183 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>La Soireé Scorecard</title>
-<link href="/static/css/style.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&amp;family=Rajdhani:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&amp;display=swap" rel="stylesheet"/>
-<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
-<script crossorigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wizarding Wonder - A Statement Experience</title>
+    <!-- Google Fonts for a magical look -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="static/css/style.css" />
 </head>
-<body class="bg-dark text-light d-flex flex-column align-items-center">
-<header class="text-center mt-3">
-<h1 class="display-1 mb-2" style="font-family: 'Lavishly Yours', cursive; color: #ffbd42;">
-            La Soireé '24 - Leaderboard
-        </h1>
-<p class="lead" style="font-family: 'Rajdhani', sans-serif; color: #d1b6a1;">
-            Last Updated: <span id="lastModified">07:27 PM 27-10-2024</span>
-</p>
-<div class="dummy-text">
-            Welcome to La Soirée: Where freshers battle for glory and bragging rights—let the scoreboard shenanigans begin!"
-            <br/>
-<p style="text-align: left;"><b>Rubrics:</b></p>
-<ul>
-<li>Rickroll - 400 points for Winners and 25 points for participation (Scores Announced)</li>
-<li>Murder Mystery - 500 points (1st place), 300 points (2nd place), 200 points (3rd place) and 25 points for participation (Scores Announced)</li>
-<li>Scavenger Hunt - 500 points (1st place), 300 points (2nd place), 200 points (3rd place), 50 points for 2nd round and 25 points for participation (Scores
-Announced)</li>
-<li>Three Legged Race - 500 points (1st place), 300 points (2nd place), 200 points (3rd place) and 25 points for participation (Scores
-Announced)</li>
-<li>Three in a Family - 500 points (1st place), 300 points (2nd place), 200 points (3rd place) and 25 points for participation (Scores
-Announced)</li>
-</ul>
-<p style="text-align: left;">Presenting the distinguished titles of the night:</p>
-<ul style="list-style-type: square;">
-<li><i><b>The King: Yash Gangwar</b></i></li>
-<li><i><b>The Queen: Sneha Raj</b></i></li>
-<li><i><b>The Regent: Suryansh Thakur</b></i></li>
-</ul>
-<p style="text-align: left;">May their elegance and spirit guide our revelry. Tonight, they reign supreme! With that Team La Soireé, Signing Off :).</p>
-</div>
-</header>
-<div class="container scorecard mt-3 rounded shadow-lg"><table class="text-center" style="width: 100%; color: #ffffff; border-collapse: collapse;">
-<thead>
-<tr>
-<th scope="col">Rank</th>
-<th scope="col">Name</th>
-<th scope="col">Score</th>
-</tr>
-</thead>
-<tbody>
-<tr class="rank-1">
-<td>1</td>
-<td>Yash Gangwar</td>
-<td>1425</td>
-</tr>
-<tr class="rank-2">
-<td>2</td>
-<td>Suryansh Thakur</td>
-<td>1100</td>
-</tr>
-<tr class="rank-3">
-<td>3</td>
-<td>Kachare Pushkraj Atul</td>
-<td>1075</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Vinay Dhole</td>
-<td>800</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Akshant</td>
-<td>800</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Vignesh Baskotra</td>
-<td>750</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Sneha Raj</td>
-<td>675</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Pawar Isha Manoj</td>
-<td>625</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Vanshika Rana</td>
-<td>600</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Pranav Verma</td>
-<td>600</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Bharti</td>
-<td>600</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Prashant Vasant Vasave</td>
-<td>575</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Lavish</td>
-<td>575</td>
-</tr>
-<tr>
-<td>10</td>
-<td>Gourav Brahma</td>
-<td>550</td>
-</tr>
-<tr>
-<td>10</td>
-<td>Shitanshu Latare</td>
-<td>550</td>
-</tr>
-<tr>
-<td>10</td>
-<td>Charole Shivam Madhav</td>
-<td>550</td>
-</tr>
-<tr>
-<td>11</td>
-<td>Aadarsh Anilkumar Nair</td>
-<td>475</td>
-</tr>
-<tr>
-<td>11</td>
-<td>Krishnai Vijay Sukalkar</td>
-<td>475</td>
-</tr>
-<tr>
-<td>11</td>
-<td>S Neeraj Krishna</td>
-<td>475</td>
-</tr>
-<tr>
-<td>12</td>
-<td>Anubhab Padhy</td>
-<td>400</td>
-</tr>
-<tr>
-<td>12</td>
-<td>Preeti Meena</td>
-<td>400</td>
-</tr>
-<tr>
-<td>12</td>
-<td>Shree Nithya Pathangi</td>
-<td>400</td>
-</tr>
-<tr>
-<td>12</td>
-<td>Saadhvi P</td>
-<td>400</td>
-</tr>
-<tr>
-<td>12</td>
-<td>Shubham Kabade</td>
-<td>400</td>
-</tr>
-<tr>
-<td>13</td>
-<td>Masala Gana Sai Supreeth</td>
-<td>375</td>
-</tr>
-<tr>
-<td>13</td>
-<td>Jay Dayabhai Miyatra</td>
-<td>375</td>
-</tr>
-<tr>
-<td>13</td>
-<td>Aditi Rawat</td>
-<td>375</td>
-</tr>
-<tr>
-<td>13</td>
-<td>Apurva Rajeshwar Pawar</td>
-<td>375</td>
-</tr>
-<tr>
-<td>13</td>
-<td>Muskan Nimbark</td>
-<td>375</td>
-</tr>
-<tr>
-<td>14</td>
-<td>Pranjal Shailesh Bhagat</td>
-<td>350</td>
-</tr>
-<tr>
-<td>14</td>
-<td>Balashanmugam R</td>
-<td>350</td>
-</tr>
-<tr>
-<td>14</td>
-<td>Pooja Umesh Tendolkar</td>
-<td>350</td>
-</tr>
-<tr>
-<td>14</td>
-<td>Pattanath Parvathy</td>
-<td>350</td>
-</tr>
-<tr>
-<td>15</td>
-<td>K Sendur Sarwaan</td>
-<td>300</td>
-</tr>
-<tr>
-<td>15</td>
-<td>Nayshikaa S</td>
-<td>300</td>
-</tr>
-<tr>
-<td>15</td>
-<td>Asmit Sharma</td>
-<td>300</td>
-</tr>
-<tr>
-<td>16</td>
-<td>Prajwal O</td>
-<td>275</td>
-</tr>
-<tr>
-<td>16</td>
-<td>Sharvesh B</td>
-<td>275</td>
-</tr>
-<tr>
-<td>16</td>
-<td>Aryan Kumar Srivastav</td>
-<td>275</td>
-</tr>
-<tr>
-<td>16</td>
-<td>Priyanshu Narjary</td>
-<td>275</td>
-</tr>
-<tr>
-<td>16</td>
-<td>Hemanth V S</td>
-<td>275</td>
-</tr>
-<tr>
-<td>16</td>
-<td>Aajarwa Raj Rai</td>
-<td>275</td>
-</tr>
-<tr>
-<td>16</td>
-<td>Saranya S</td>
-<td>275</td>
-</tr>
-<tr>
-<td>16</td>
-<td>Jagan Nath S D</td>
-<td>275</td>
-</tr>
-<tr>
-<td>17</td>
-<td>Abinaya R</td>
-<td>250</td>
-</tr>
-<tr>
-<td>18</td>
-<td>Aniket Pravin Purnaye</td>
-<td>225</td>
-</tr>
-<tr>
-<td>19</td>
-<td>Sirushti Ganesh</td>
-<td>100</td>
-</tr>
-<tr>
-<td>20</td>
-<td>Harish M</td>
-<td>75</td>
-</tr>
-<tr>
-<td>20</td>
-<td>A K Mahati</td>
-<td>75</td>
-</tr>
-<tr>
-<td>20</td>
-<td>A K Rohith Kumar</td>
-<td>75</td>
-</tr>
-<tr>
-<td>20</td>
-<td>Ragavi S V</td>
-<td>75</td>
-</tr>
-<tr>
-<td>20</td>
-<td>Khushi Gupta</td>
-<td>75</td>
-</tr>
-<tr>
-<td>20</td>
-<td>Prachee</td>
-<td>75</td>
-</tr>
-<tr>
-<td>20</td>
-<td>Shraddha Kesharwani</td>
-<td>75</td>
-</tr>
-<tr>
-<td>20</td>
-<td>Keerthipriya T A</td>
-<td>75</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Vijay Vedanth Vemula</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>P. Madhumathi</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Reshim Lakkad</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>M R Chandu Yasodar</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Ananya Ghosh</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Yuvasree K K</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Rajeshwari Meher</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Vighneshwar</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Satwarsham</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Mahima Poonia</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Maarisha Tripathi</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Nawab Mukril Zadeed</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>S Vamsi</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Chandni Patidar</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Shivalik Mahata</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Anju D Harish</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Vineet D Suryavanshi</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Chetanprabha Patel</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Abhijay Krishna B</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Junayed Hassan</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Gunjan Tripathi</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Hanwatkar Vedant Nandkishor</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Jothir Adhithya M</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Doddala Jairam Naga Nevan</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Diksha Kiran Korra</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Shruthi P</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Janhavi Ganesh Kharat</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Morasa Keerhika</td>
-<td>50</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Nancy Chandra</td>
-<td>50</td>
-</tr>
-<tr>
-<td>22</td>
-<td>K Deepika</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Shakti Sarada Durganandan Dash</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Nidhi Lalsingh Choudhari</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Nilakshi Chatterjee</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Ritesh Hanmantrao Jadhav</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Rose Joseph</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Yashika Mishra</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Srutika</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Sabale Tejas Kamlakar</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Sachin</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Abhishek Deepak</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Naveen</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Anusree K</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Mohan Balaji Gutte</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Divyansh</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Austin Dcruz</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Soorya G K</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Swastika Kumari</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Atharv Umesh Sone</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Aunoor Rushabh Raju</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Pragati</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Pragati Kushwaha</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Akshat Pratap Singh</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Anirudh B Nair</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Lopa Talegaonkar</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Ahmed Shamil M P</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Jiya Goja</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Nikhitha S</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Anish Karthikeyan P</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Irfan Sharaf . N</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Kanupriya Banerjee</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Ayush</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Isha Pathak</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Harish Giri</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Tejal Rajesh Chaudhari</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Ishaan S K</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>G Karthik Chowdary</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Gedam Akshat Shyam</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Jyothilakshmi V</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Avanthika M</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Chaithra J M</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Pola Nityasree</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Omm Prakash Kanhar</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Satyajit Rath</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Kannika Parameswari V</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Akanksha Shrivastav</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Malavath Goutham Naik</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Chinmay Manoj Deshpande</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Raazik Muhammed A</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Anay Verma</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Peeyush Sahu</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Puttamraju V V S Jayachandra</td>
-<td>25</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Shreya Shankar Masram</td>
-<td>25</td>
-</tr>
-</tbody>
-</table></div>
+
+<body>
+    <!-- Particle Canvas for Wizard Magic -->
+    <canvas id="magicCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Wizarding Wonder</div>
+            <ul class="nav-links">
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#magic">Magic in Action</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#join">Join the Magic</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Unleash the Magic</h1>
+            <p class="hero-subtitle">Experience a wizarding realm like never before.</p>
+            <a href="#magic" class="btn btn-primary">Enter the Realm</a>
+        </div>
+        <div class="scroll-down">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Our Story Section -->
+    <section id="story" class="section story">
+        <div class="container">
+            <h2 class="section-title">Our Story</h2>
+            <p class="section-text">
+                Step into a world where magic transcends the ordinary. Born from ancient legends and modern marvels, our
+                journey ignites the spark of wizarding wonder in every heart.
+            </p>
+        </div>
+    </section>
+
+    <!-- Magic in Action Section -->
+    <section id="magic" class="section magic">
+        <div class="container">
+            <h2 class="section-title">Magic in Action</h2>
+            <div class="magic-items">
+                <div class="magic-item">
+                    <img src="https://via.placeholder.com/300x200?text=Potion+Brew" alt="Potion Brew" />
+                    <h3>Potion Brew</h3>
+                    <p>Concoct elixirs that defy reality in our state-of-the-art labs.</p>
+                </div>
+                <div class="magic-item">
+                    <img src="https://via.placeholder.com/300x200?text=Spell+Duel" alt="Spell Duel" />
+                    <h3>Spell Duel</h3>
+                    <p>Engage in electrifying spell duels where every incantation counts.</p>
+                </div>
+                <div class="magic-item">
+                    <img src="https://via.placeholder.com/300x200?text=Enchanted+Journey" alt="Enchanted Journey" />
+                    <h3>Enchanted Journey</h3>
+                    <p>Embark on a quest through mystical realms and hidden wonders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-grid">
+                <img src="https://via.placeholder.com/400x300?text=Magic+Moment+1" alt="Magic Moment 1" />
+                <img src="https://via.placeholder.com/400x300?text=Magic+Moment+2" alt="Magic Moment 2" />
+                <img src="https://via.placeholder.com/400x300?text=Magic+Moment+3" alt="Magic Moment 3" />
+                <img src="https://via.placeholder.com/400x300?text=Magic+Moment+4" alt="Magic Moment 4" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Join the Magic Section -->
+    <section id="join" class="section join">
+        <div class="container">
+            <h2 class="section-title">Join the Magic</h2>
+            <p class="section-text">
+                Become part of this extraordinary journey. Connect with fellow wizards, master secret spells, and
+                experience a transformation beyond the ordinary.
+            </p>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Your Email" required />
+                <textarea placeholder="Your Message or Spell" required></textarea>
+                <button type="submit" class="btn btn-secondary">Cast Your Spell</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Wizarding Wonder. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Wizard Magic Particles Script -->
+    <script>
+        const canvas = document.getElementById('magicCanvas');
+        const ctx = canvas.getContext('2d');
+        let particlesArray = [];
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 1;
+                this.speedX = Math.random() * 3 - 1.5;
+                this.speedY = Math.random() * 3 - 1.5;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.size > 0.2) this.size -= 0.03;
+            }
+            draw() {
+                ctx.fillStyle = 'rgba(255, 215, 0, 0.8)';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particlesArray = [];
+            for (let i = 0; i < 100; i++) {
+                particlesArray.push(new Particle());
+            }
+        }
+
+        function handleParticles() {
+            for (let i = 0; i < particlesArray.length; i++) {
+                particlesArray[i].update();
+                particlesArray[i].draw();
+                if (particlesArray[i].size <= 0.3) {
+                    particlesArray[i] = new Particle();
+                }
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            handleParticles();
+            requestAnimationFrame(animate);
+        }
+
+        initParticles();
+        animate();
+
+        // Readjust canvas size on window resize
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            initParticles();
+        });
+    </script>
 </body>
+
 </html>

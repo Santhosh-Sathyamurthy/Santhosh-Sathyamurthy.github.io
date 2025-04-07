@@ -17,21 +17,21 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Set up Git Authentication using GITHUB_TOKEN
-        run: |
-          git config --global user.name "GitHub Action"
-          git config --global user.email "action@github.com"
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Santhosh-Sathyamurthy/Santhosh-Sathyamurthy.github.io.git
+      # - name: Set up Git Authentication using GITHUB_TOKEN
+      #   run: |
+      #     git config --global user.name "GitHub Action"
+      #     git config --global user.email "action@github.com"
+      #     git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Santhosh-Sathyamurthy/Santhosh-Sathyamurthy.github.io.git
 
-      - name: Get last commit date
-        id: get_last_commit_date
-        run: |
-          LAST_MODIFIED=$(git log -1 --format=%cd --date=format:"%I:%M %p %d-%m-%Y")
-          echo "LAST_MODIFIED=$LAST_MODIFIED" >> $GITHUB_ENV
+      # - name: Get last commit date
+      #   id: get_last_commit_date
+      #   run: |
+      #     LAST_MODIFIED=$(git log -1 --format=%cd --date=format:"%I:%M %p %d-%m-%Y")
+      #     echo "LAST_MODIFIED=$LAST_MODIFIED" >> $GITHUB_ENV
 
-      - name: Update last modified date in index.html
-        run: |
-          sed -i 's|<span id="lastModified">.*</span>|<span id="lastModified">'"$LAST_MODIFIED"'</span>|g' ./index.html
+      # - name: Update last modified date in index.html
+      #   run: |
+      #     sed -i 's|<span id="lastModified">.*</span>|<span id="lastModified">'"$LAST_MODIFIED"'</span>|g' ./index.html
 
       - name: Commit and Push Changes
         run: |
