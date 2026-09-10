@@ -1,10 +1,136 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Council of Student Activities | IISER Tirupati</title>
+<meta name="description" content="Clubs, councils, events and student life at IISER Tirupati, maintained by the Council of Student Activities.">
+<meta name="author" content="PaCODEah, Tech Club, IISER Tirupati">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/utilities.css">
+<script>window.PAGE_ID = 'home';</script>
 </head>
 <body>
-    <h1>Welcome to test site</h1>
+<!--
+  Council of Student Activities, IISER Tirupati
+  Built by PaCODEah (Tech Club, IISER Tirupati). Project lead: Santhosh S, BSMS-2023.
+  See /README.md for architecture notes and /COMPLIANCE-AUDIT.md for the
+  UX4G / GIGW 3.0 / WCAG 2.1 AA audit this build was checked against.
+-->
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div data-partial="header"></div>
+
+<main id="main-content" tabindex="-1">
+
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <span class="kicker">Council of Student Activities &middot; IISER Tirupati</span>
+      <h1>Every club, council and campus event, run by students, for students.</h1>
+      <p class="lede">From robotics sprints to open mics, the Council of Student Activities coordinates budget, space and scheduling so every club on campus, new or long-running, gets a fair shot at running things well.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="clubs.html">Browse all clubs</a>
+        <a class="btn btn-ghost" href="contact.html">Start a new club</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="num">18+</div><div class="lbl">Active clubs</div></div>
+        <div><div class="num">5</div><div class="lbl">Councils</div></div>
+        <div><div class="num">30+</div><div class="lbl">Events a year</div></div>
+        <div><div class="num">1</div><div class="lbl">Elected student council</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Structure</span>
+          <h2 class="mt-2">Five councils, listed alphabetically, with no club or category given top billing.</h2>
+        </div>
+        <p>Every club on campus sits under one of these categories. Order here is strictly A&ndash;Z, on principle: see our <a href="council.html#neutrality">neutrality policy</a>.</p>
+      </div>
+      <div class="chip-row" data-clubs-chiprow aria-live="polite">
+        <p>Loading councils&hellip;</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="raised">
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="kicker">What's on</span><h2 class="mt-2">Upcoming on campus</h2></div>
+        <a class="btn btn-ghost" href="events.html">Full events calendar &rarr;</a>
+      </div>
+      <div class="grid cols-3" data-events-upcoming aria-live="polite">
+        <p>Loading events&hellip;</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Join in</span>
+          <h2 class="mt-2">One club from every council, on rotation</h2>
+        </div>
+        <a class="btn btn-ghost" href="clubs.html">All 18+ clubs &rarr;</a>
+      </div>
+      <p style="margin-top:-8px; color:var(--ink-60); font-size:14px; max-width:60ch;">This spotlight cycles daily through every club, one per council, so the same few clubs never own this space. Nothing here reflects size, funding or seniority. See the <a href="council.html#neutrality">full policy</a>.</p>
+      <div class="grid cols-3 mt-5" data-clubs-spotlight aria-live="polite">
+        <p>Loading clubs&hellip;</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="raised">
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="kicker">About this site</span><h2 class="mt-2">Built by students, for students, kept to government standards</h2></div>
+      </div>
+      <div class="grid cols-3">
+        <div class="index-card">
+          <span class="cat" style="color:var(--teal)">Accessible</span>
+          <h3>WCAG 2.1 AA throughout</h3>
+          <p class="desc">Keyboard navigation, visible focus states, resizable text, dark mode and screen-reader-friendly markup on every page. Read the <a href="accessibility-statement.html">accessibility statement</a>.</p>
+        </div>
+        <div class="index-card">
+          <span class="cat" style="color:var(--flame)">Transparent</span>
+          <h3>No club plays favourites</h3>
+          <p class="desc">Clubs and councils are always ordered alphabetically or by date, never by size or seniority. It's a documented policy, not an accident. See the <a href="council.html#neutrality">Council page</a>.</p>
+        </div>
+        <div class="index-card">
+          <span class="cat" style="color:var(--violet)">Maintainable</span>
+          <h3>Plain HTML, CSS and JS</h3>
+          <p class="desc">No build step, no framework lock-in. Clubs and events live in two JSON files anyone on the Council can edit. See the <a href="https://github.com/" rel="noopener noreferrer">handover README</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ink">
+    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;">
+      <div>
+        <span class="kicker" style="color:var(--signal)">Run a club?</span>
+        <h2 style="margin-top:12px;max-width:24ch;">Send us your details and we'll add your club to this site.</h2>
+      </div>
+      <a class="btn btn-primary" href="contact.html">Get in touch &rarr;</a>
+    </div>
+  </section>
+
+</main>
+
+<div data-partial="footer"></div>
+
+<script src="assets/js/include-partials.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/accessibility-toolbar.js"></script>
+<script src="assets/js/visitor-counter.js"></script>
+<script src="assets/js/clubs-render.js"></script>
+<script src="assets/js/events-render.js"></script>
 </body>
 </html>
