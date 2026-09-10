@@ -1,0 +1,123 @@
+/* =========================================================
+   Council of Student Activities, IISER Tirupati
+   DESIGN TOKENS
+   Built by PaCODEah (Tech Club, IISER Tirupati)
+
+   Edit values here to re-theme the whole site. Nothing below
+   this file should hard-code a colour, font stack or spacing
+   value, always reference a token.
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root{
+  /* ---- colour: "field notebook" palette -----------------
+     Chosen deliberately to avoid the generic cream+terracotta
+     or near-black+neon AI-default palettes. Base is a cool
+     paper grey (not cream), ink is a deep navy-charcoal (not
+     pure black), and the accents are a signal yellow (campus
+     notice-board energy) plus a deep teal and a flame red used
+     sparingly for action and alerts. All pairings below meet
+     WCAG 2.1 AA contrast (4.5:1 body text / 3:1 large text). */
+  --ink:          #10182A;
+  --ink-80:       rgba(16,24,42,.82);
+  --ink-60:       rgba(16,24,42,.62);
+  --ink-40:       rgba(16,24,42,.42);
+  --ink-15:       rgba(16,24,42,.14);
+
+  --paper:        #F3F5EF;   /* page background */
+  --paper-raised: #FFFFFF;   /* cards, panels */
+  --paper-line:   #D8DECB;   /* hairlines / grid */
+  --paper-dim:    #E7EBDD;   /* subtle section tint */
+
+  --signal:       #F2A900;   /* primary accent, notice-board yellow */
+  --signal-ink:   #402C00;   /* text-on-signal, meets AA */
+  --signal-tint:  #FCEBC2;
+
+  --teal:         #0E6B5C;   /* links, secondary actions */
+  --teal-tint:    #DCEEE9;
+
+  --flame:        #C7401F;  /* CTAs, dates, urgent */
+  --flame-tint:   #F7DFD6;
+
+  --violet:       #5B4B8A;  /* fifth categorical colour, used only for club-category coding */
+
+  --focus-ring:   #1758C9;  /* keyboard focus, distinct from all accents for clear visibility */
+
+  /* ---- type ---------------------------------------------- */
+  --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-body:    'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  --step--1:  0.833rem;
+  --step-0:   1rem;
+  --step-1:   1.2rem;
+  --step-2:   1.44rem;
+  --step-3:   1.728rem;
+  --step-4:   2.074rem;
+  --step-5:   2.488rem;
+  --step-6:   3.5rem;
+
+  /* ---- layout --------------------------------------------- */
+  --container: 1200px;
+  --container-narrow: 780px;
+  --radius-sm: 4px;
+  --radius: 10px;
+  --radius-lg: 18px;
+
+  /* card elevation, used so cards read as physical raised objects
+     rather than boxes defined purely by a border */
+  --shadow-card: 0 1px 2px rgba(16,24,42,.06), 0 8px 20px -6px rgba(16,24,42,.16);
+  --shadow-card-hover: 0 2px 4px rgba(16,24,42,.08), 0 16px 32px -8px rgba(16,24,42,.22);
+  --shadow-pop: 4px 4px 0 0 var(--ink);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+}
+
+/* Dark mode support, GIGW/UX4G accessibility recommendation.
+   Toggled by adding data-theme="dark" to <html> (see
+   accessibility-toolbar.js). Kept as a token override so every
+   component automatically follows it. */
+:root[data-theme="dark"]{
+  --ink:          #EDEFE7;
+  --ink-80:       rgba(237,239,231,.82);
+  --ink-60:       rgba(237,239,231,.62);
+  --ink-40:       rgba(237,239,231,.42);
+  --ink-15:       rgba(237,239,231,.16);
+
+  --paper:        #10141A;
+  --paper-raised: #171C24;
+  --paper-line:   #2B3240;
+  --paper-dim:    #1B212A;
+
+  --signal:       #F2A900;
+  --signal-ink:   #10141A;
+  --signal-tint:  #3A2C0A;
+
+  --teal:         #4FCDB8;
+  --teal-tint:    #123632;
+
+  --flame:        #FF7A56;
+  --flame-tint:   #3B1B12;
+
+  --violet:       #B9A9F0;
+
+  --focus-ring:   #6FA8FF;
+
+  --shadow-card: 0 1px 2px rgba(0,0,0,.4), 0 10px 24px -6px rgba(0,0,0,.55);
+  --shadow-card-hover: 0 2px 4px rgba(0,0,0,.5), 0 18px 36px -8px rgba(0,0,0,.65);
+  --shadow-pop: 4px 4px 0 0 var(--signal);
+}
+
+/* Text-size step, toggled by the accessibility toolbar
+   (A- / A / A+). Scales the whole document via rem. */
+:root[data-text-scale="lg"]{ font-size: 112.5%; }
+:root[data-text-scale="xl"]{ font-size: 125%; }

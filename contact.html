@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Council of Student Activities, IISER Tirupati</title>
+<meta name="description" content="Start a club, volunteer at an event, or reach the Council of Student Activities at IISER Tirupati.">
+<meta name="author" content="PaCODEah, Tech Club, IISER Tirupati">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/utilities.css">
+<script>window.PAGE_ID = 'contact';</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div data-partial="header"></div>
+
+<main id="main-content" tabindex="-1">
+  <div class="wrap breadcrumb"><a href="index.html">Home</a> / <span aria-current="page">Contact</span></div>
+
+  <section class="tight">
+    <div class="wrap-narrow">
+      <span class="kicker">Get in touch</span>
+      <h1 class="mt-2" style="font-size:var(--step-5);">Contact the Council</h1>
+      <p class="lede" style="font-size:1.05rem;">Use the form for club registration, event submissions or general questions. For anything about this website's accessibility, use the dedicated link on the <a href="accessibility-statement.html">Accessibility Statement</a> instead.</p>
+    </div>
+  </section>
+
+  <section class="raised">
+    <div class="wrap-narrow">
+      <form id="contact-form" novalidate>
+        <fieldset id="volunteer">
+          <legend>What's this about?</legend>
+          <div class="form-field">
+            <label for="reason">Reason for contact <span class="required-mark" aria-hidden="true">*</span></label>
+            <select id="reason" name="reason" required aria-required="true">
+              <option value="">Choose one&hellip;</option>
+              <option value="start-club">Register a new club</option>
+              <option value="submit-event">Submit an event</option>
+              <option value="volunteer">Volunteer at an event</option>
+              <option value="general">General question</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your details</legend>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Full name <span class="required-mark" aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" required aria-required="true" autocomplete="name">
+            </div>
+            <div class="form-field">
+              <label for="roll">Roll number</label>
+              <input type="text" id="roll" name="roll" autocomplete="off">
+              <p class="hint">Optional. Helps the Council verify current students.</p>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="email">Institute email <span class="required-mark" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" required aria-required="true" autocomplete="email">
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Message</legend>
+          <div class="form-field">
+            <label for="message">Details <span class="required-mark" aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" required aria-required="true" aria-describedby="message-hint"></textarea>
+            <p class="hint" id="message-hint">If registering a club: include the club name, category, a one-line pitch and your faculty advisor's name.</p>
+          </div>
+        </fieldset>
+
+        <button class="btn btn-primary" type="submit">Send message</button>
+        <p class="form-status mt-3" id="form-note" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <section id="location">
+    <div class="wrap">
+      <div class="grid cols-2">
+        <div>
+          <h2>Find us</h2>
+          <p>Council of Student Activities Office<br>
+          Student Activity Centre, IISER Tirupati<br>
+          Srinivasapuram, Yerpedu Mandal, Tirupati District<br>
+          Andhra Pradesh, India &ndash; 517619</p>
+          <p><a href="https://www.google.com/maps/search/?api=1&query=IISER+Tirupati" rel="noopener noreferrer">Open in Google Maps <span class="visually-hidden">(opens in a new tab, external site)</span></a></p>
+          <p style="font-size:13px;color:var(--ink-60);">We link out to Google Maps rather than embedding it, in line with the site's policy of avoiding unnecessary third-party trackers. See the <a href="privacy-policy.html">Privacy Policy</a>.</p>
+        </div>
+        <div>
+          <h2>Grievance redressal</h2>
+          <p>If a club or student feels a Council decision (budget, venue, scheduling) was unfair, it can be raised formally rather than left unresolved:</p>
+          <ol style="padding-left:20px; color:var(--ink-80);">
+            <li>Raise it first with the relevant sub-council coordinator, in writing.</li>
+            <li>If unresolved within 7 days, escalate to the General Secretary via this contact form (select "Something else" and mark it "Grievance").</li>
+            <li>Unresolved grievances go to the Dean of Student Affairs, per the <a href="council.html#constitution">Constitution</a>.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div data-partial="footer"></div>
+
+<script src="assets/js/include-partials.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/accessibility-toolbar.js"></script>
+<script src="assets/js/visitor-counter.js"></script>
+<script>
+  // Static placeholder: no backend is wired up yet. Wire this to
+  // a real endpoint (institute mail relay, a form service, etc.)
+  // before launch; keep the aria-live status update either way.
+  document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!e.target.checkValidity()) {
+      e.target.reportValidity();
+      return;
+    }
+    document.getElementById('form-note').textContent =
+      "This form isn't wired up to a mailbox yet. Please email studentactivities@iisertirupati.ac.in directly for now.";
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+/* =========================================================
+   COMPONENTS
+   ========================================================= */
+
+/* ---------- eyebrow / mono kicker (used sparingly, only where
+   it labels a genuine category, never as pure decoration) --- */
+.kicker{
+  font-family: var(--font-mono); font-size: 12.5px; letter-spacing: .04em;
+  color: var(--teal); font-weight: 500;
+}
+
+/* ---------- buttons ---------- */
+.btn{
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  font-family: var(--font-body); font-weight: 700; font-size: 14.5px;
+  padding: 12px 22px; border-radius: var(--radius-sm); border: 2px solid var(--ink);
+  cursor: pointer; text-decoration: none; line-height: 1;
+  transition: transform .12s ease, box-shadow .12s ease, background-color .12s ease;
+}
+.btn-primary{ background: var(--signal); color: var(--signal-ink); border-color: var(--signal); box-shadow: var(--shadow-pop); }
+.btn-primary:hover{ transform: translate(-2px,-2px); box-shadow: 6px 6px 0 0 var(--ink); text-decoration: none; }
+.btn-ink{ background: var(--ink); color: var(--paper); }
+.btn-ink:hover{ background: transparent; color: var(--ink); text-decoration: none; }
+.btn-ghost{ background: transparent; color: var(--ink); }
+.btn-ghost:hover{ background: var(--ink); color: var(--paper); text-decoration: none; }
+.btn[aria-current="true"]{ background: var(--ink); color: var(--paper); }
+.btn:focus-visible{ outline-offset: 3px; }
+
+/* ---------- hero ---------- */
+.hero{
+  position: relative; overflow: hidden;
+  border-bottom: 2px solid var(--ink);
+  background-color: var(--paper-dim);
+  background-image: radial-gradient(var(--paper-line) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+}
+.hero-inner{ position: relative; padding: var(--space-9) 0 var(--space-7); }
+.hero .kicker{ display: inline-flex; align-items: center; gap: 8px; }
+.hero h1{ font-size: clamp(2.4rem, 5.2vw, 4.2rem); max-width: 17ch; margin-top: var(--space-3); }
+.hero .lede{ max-width: 52ch; font-size: 1.1rem; color: var(--ink-80); margin-top: var(--space-4); }
+.hero-cta{ display: flex; gap: var(--space-4); margin-top: var(--space-6); flex-wrap: wrap; }
+
+.hero-stats{ display: flex; flex-wrap: wrap; margin-top: var(--space-8); border-top: 1px solid var(--ink-15); }
+.hero-stats > div{ flex: 1 1 180px; padding: var(--space-4) var(--space-5) 0 0; border-left: 1px solid var(--ink-15); padding-left: var(--space-5); }
+.hero-stats > div:first-child{ border-left: none; padding-left: 0; }
+.hero-stats .num{ font-family: var(--font-display); font-size: var(--step-4); font-weight: 700; }
+.hero-stats .lbl{ font-family: var(--font-mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-60); margin-top: 4px; }
+
+/* ---------- index-card: the site's signature component -------
+   A nod to library catalogue cards / campus pin-board notices, grounded in "council of student activities" subject matter
+   rather than a generic rounded SaaS card. A visible corner
+   fold + a slight, non-random rotation gives it a physical,
+   pinned-up feel without relying on stock photography. */
+.grid{ display: grid; gap: var(--space-5); }
+.grid.cols-3{ grid-template-columns: repeat(3, 1fr); }
+.grid.cols-2{ grid-template-columns: repeat(2, 1fr); }
+.grid.cols-4{ grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 980px){ .grid.cols-3, .grid.cols-4{ grid-template-columns: 1fr 1fr; } }
+@media (max-width: 620px){ .grid.cols-3, .grid.cols-4, .grid.cols-2{ grid-template-columns: 1fr; } }
+
+.index-card{
+  position: relative;
+  background: var(--paper-raised);
+  border: 1px solid var(--paper-line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-5);
+  display: flex; flex-direction: column; gap: var(--space-3);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.index-card:hover{
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+.index-card::before{
+  /* punch-hole, like a library card, a structural detail tied
+     to the "index card" concept, not decoration for its own sake */
+  content: "";
+  position: absolute; top: 16px; left: 16px;
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--paper); border: 1.5px solid var(--ink-15);
+  box-shadow: inset 0 1px 2px rgba(16,24,42,.25);
+}
+.index-card .cat{
+  align-self: flex-start; margin-left: var(--space-5);
+  font-family: var(--font-mono); font-size: 11px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 999px; border: 1px solid currentColor;
+}
+.index-card h3{ font-size: 1.2rem; margin-top: 2px; }
+.index-card .desc{ color: var(--ink-60); font-size: 14.5px; }
+.index-card .meta{
+  font-family: var(--font-mono); font-size: 12px; color: var(--ink-60);
+  margin-top: auto; padding-top: var(--space-3); border-top: 1px dashed var(--paper-line);
+  display: flex; justify-content: space-between; gap: var(--space-3); flex-wrap: wrap;
+}
+.index-card a.link{ font-weight: 700; font-size: 13.5px; text-decoration: none; }
+.index-card a.link:hover{ text-decoration: underline; }
+
+/* forced-colors / high-contrast mode: shadows disappear under
+   forced palettes, so give the card a real border back then */
+@media (forced-colors: active){
+  .index-card, .chip, .notice{ border: 2px solid CanvasText; box-shadow: none; }
+}
+
+/* category colour coding, used consistently everywhere so a
+   category means the same colour on every page, but never used
+   to imply rank/order between clubs */
+.cat-technical{ color: var(--teal); }
+.cat-cultural{ color: var(--signal-ink); background: var(--signal-tint); border-color: var(--signal); }
+.cat-sports{ color: var(--flame); }
+.cat-literary{ color: var(--violet); }
+.cat-social{ color: #1758C9; }
+
+/* ---------- category chips (structure section) ---------- */
+.chip-row{ display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--space-4); }
+@media (max-width: 980px){ .chip-row{ grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px){ .chip-row{ grid-template-columns: 1fr; } }
+.chip{
+  display: block; background: var(--paper-raised); border: 1px solid var(--paper-line);
+  border-radius: var(--radius); padding: var(--space-4); text-decoration: none; color: var(--ink);
+  box-shadow: var(--shadow-card);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.chip:hover{ transform: translateY(-3px); box-shadow: var(--shadow-card-hover); text-decoration: none; }
+.chip .dot{ width: 14px; height: 14px; border-radius: 50%; display: block; margin-bottom: var(--space-3); }
+.chip h4{ font-size: 1.05rem; margin-bottom: 4px; }
+.chip p{ font-size: 13.5px; color: var(--ink-60); margin: 0; }
+
+/* ---------- filter bar ---------- */
+.filter-bar{ display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-6); }
+.filter-bar button{
+  font-family: var(--font-body); font-weight: 600; font-size: 13.5px;
+  background: var(--paper-raised); border: 1.5px solid var(--ink); border-radius: 999px;
+  padding: 8px 16px; cursor: pointer; color: var(--ink);
+}
+.filter-bar button:hover{ background: var(--paper-dim); }
+.filter-bar button[aria-pressed="true"]{ background: var(--ink); color: var(--paper); }
+
+/* ---------- notice / callout ---------- */
+.notice{
+  border: 1px solid var(--paper-line); border-left: 4px solid var(--ink); border-radius: var(--radius);
+  padding: var(--space-5); background: var(--paper-raised); box-shadow: var(--shadow-card);
+  display: flex; gap: var(--space-4); align-items: flex-start;
+}
+.notice svg{ flex: none; margin-top: 3px; }
+.notice.notice-warn{ border-color: var(--flame); background: var(--flame-tint); }
+.notice.notice-info{ border-color: var(--teal); background: var(--teal-tint); }
+
+/* ---------- data / illustration placeholder block ----------
+   Used instead of stock photography we don't have rights to.
+   Each club/event gets a generated identicon-style pattern
+   seeded from its name (see main.js) so every entry is visibly
+   distinct without favouring any one club with a "real" photo
+   while others get placeholders. */
+.art-block{
+  border-radius: var(--radius); border: 1px solid var(--paper-line);
+  min-height: 130px; display: flex; align-items: flex-end;
+  background: var(--paper-dim); overflow: hidden;
+}
+.art-block svg{ width: 100%; height: 100%; display: block; }
+
+/* ---------- breadcrumb ---------- */
+.breadcrumb{ font-family: var(--font-mono); font-size: 12.5px; color: var(--ink-60); padding: var(--space-4) 0; }
+.breadcrumb a{ color: var(--ink-60); text-decoration: none; }
+.breadcrumb a:hover{ text-decoration: underline; }
+.breadcrumb [aria-current="page"]{ color: var(--ink); font-weight: 600; }
+
+/* ---------- forms ---------- */
+.form-field{ margin-bottom: var(--space-5); }
+.form-field label{ display: block; font-weight: 700; font-size: 14px; margin-bottom: 6px; }
+.form-field .hint{ font-size: 12.5px; color: var(--ink-60); margin-top: 4px; }
+.form-field input, .form-field textarea, .form-field select{
+  width: 100%; font: inherit; font-size: 15px; padding: 11px 13px;
+  border: 1.5px solid var(--ink-40); border-radius: var(--radius-sm); background: var(--paper-raised); color: var(--ink);
+}
+.form-field input:focus, .form-field textarea:focus, .form-field select:focus{ border-color: var(--teal); }
+.form-field textarea{ min-height: 130px; resize: vertical; }
+.form-row{ display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+@media (max-width: 620px){ .form-row{ grid-template-columns: 1fr; } }
+fieldset{ border: 1.5px solid var(--paper-line); border-radius: var(--radius-sm); padding: var(--space-4); margin: 0 0 var(--space-5); }
+legend{ font-weight: 700; padding: 0 6px; font-size: 14px; }
+.required-mark{ color: var(--flame); }
+[aria-live="polite"].form-status{ font-weight: 600; }
+
+/* ---------- accordion (FAQ) ---------- */
+.accordion-item{ border-bottom: 1px solid var(--paper-line); }
+.accordion-trigger{
+  width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+  padding: var(--space-4) 0; font-family: var(--font-display); font-weight: 600; font-size: 1.02rem;
+  display: flex; justify-content: space-between; align-items: center; gap: var(--space-3); color: var(--ink);
+}
+.accordion-panel{ padding: 0 0 var(--space-4); color: var(--ink-80); max-width: 66ch; }
+.accordion-panel[hidden]{ display: none; }
+.accordion-trigger .plus{ font-family: var(--font-mono); flex: none; }
+
+/* ---------- table (used on sitemap / structured pages) ---------- */
+.data-table th, .data-table td{ padding: 10px 14px; border-bottom: 1px solid var(--paper-line); text-align: left; font-size: 14.5px; }
+.data-table th{ font-family: var(--font-mono); font-size: 12px; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-60); }
+
+/* ---------- gallery lightbox-free grid ---------- */
+.gallery-grid{ display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); }
+@media (max-width: 900px){ .gallery-grid{ grid-template-columns: repeat(2, 1fr); } }
+.gallery-item{
+  border: 1px solid var(--paper-line); border-radius: var(--radius); overflow: hidden;
+  background: var(--paper-raised); box-shadow: var(--shadow-card);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.gallery-item:hover{ transform: translateY(-4px); box-shadow: var(--shadow-card-hover); }
+.gallery-item figcaption{ font-family: var(--font-mono); font-size: 11.5px; padding: 8px 10px; color: var(--ink-60); border-top: 1px solid var(--paper-line); }
+
+/* ---------- pull quote ---------- */
+blockquote.pull{
+  border-left: 4px solid var(--signal); margin: 0; padding: var(--space-2) 0 var(--space-2) var(--space-5);
+  font-family: var(--font-display); font-size: 1.25rem; font-weight: 500;
+}
+blockquote.pull cite{ display: block; font-family: var(--font-mono); font-style: normal; font-size: 12.5px; color: var(--ink-60); margin-top: var(--space-3); }
+
+/* ---------- back-to-top ---------- */
+.to-top{
+  position: fixed; right: var(--space-5); bottom: var(--space-5); z-index: 60;
+  background: var(--ink); color: var(--paper); border: none; border-radius: 999px;
+  width: 46px; height: 46px; cursor: pointer; display: none; align-items: center; justify-content: center;
+  box-shadow: 0 4px 12px rgba(16,24,42,.25);
+}
+.to-top.is-visible{ display: inline-flex; }
+
+.mt-2{ margin-top: var(--space-2); } .mt-3{ margin-top: var(--space-3); } .mt-5{ margin-top: var(--space-5); } .mt-7{ margin-top: var(--space-7); }

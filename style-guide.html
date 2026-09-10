@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style Guide (internal) | Council of Student Activities, IISER Tirupati</title>
+<meta name="description" content="Internal reference sheet for the design tokens and components used across this site. Not linked from the public nav.">
+<meta name="robots" content="noindex">
+<meta name="author" content="PaCODEah, Tech Club, IISER Tirupati">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/utilities.css">
+<link rel="stylesheet" href="assets/css/placeholder-swatches.css">
+<script>window.PAGE_ID = '';</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div data-partial="header"></div>
+
+<main id="main-content" tabindex="-1">
+  <section class="tight">
+    <div class="wrap">
+      <span class="kicker">Internal, not in main nav</span>
+      <h1 class="mt-2" style="font-size:var(--step-5);">Style guide &amp; placeholder swatches</h1>
+      <p class="lede" style="font-size:1rem;">One page showing every colour, type step and reusable component in the system, so anyone taking over maintenance can see the whole palette at a glance instead of hunting through CSS files. This page is intentionally excluded from the header nav, and from the public section of <code>sitemap.html</code> (it's listed there under "Internal build tools" instead). It's a build tool, not a public page. Delete it, or keep it and just leave it unlinked from the main nav; either is fine. For trying out different colour decks and font pairings side by side, see <a href="theme-lab.html">theme-lab.html</a> instead.</p>
+    </div>
+  </section>
+
+  <section class="raised">
+    <div class="wrap">
+      <h2>Colour tokens</h2>
+      <p>Every swatch below is pulled live from <code>tokens.css</code> via the class names in <code>placeholder-swatches.css</code>. If you edit a token, this page updates with it.</p>
+      <div class="swatch-grid mt-5">
+        <div class="swatch sw-ink"><span>--ink</span><code>#10182A</code></div>
+        <div class="swatch sw-paper"><span>--paper</span><code>#F3F5EF</code></div>
+        <div class="swatch sw-paper-raised"><span>--paper-raised</span><code>#FFFFFF</code></div>
+        <div class="swatch sw-signal"><span>--signal</span><code>#F2A900</code></div>
+        <div class="swatch sw-teal"><span>--teal</span><code>#0E6B5C</code></div>
+        <div class="swatch sw-flame"><span>--flame</span><code>#C7401F</code></div>
+        <div class="swatch sw-violet"><span>--violet</span><code>#5B4B8A</code></div>
+        <div class="swatch sw-focus"><span>--focus-ring</span><code>#1758C9</code></div>
+      </div>
+      <p class="mt-5">Toggle dark mode in the utility bar above to see the dark-theme overrides for the same tokens (defined in <code>tokens.css</code> under <code>:root[data-theme="dark"]</code>).</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Type scale</h2>
+      <p style="font-size:var(--step--1)">step -1: fine print / hints</p>
+      <p style="font-size:var(--step-0)">step 0: body text</p>
+      <p style="font-size:var(--step-1)">step 1</p>
+      <p style="font-size:var(--step-2)">step 2</p>
+      <p style="font-size:var(--step-3)">step 3</p>
+      <p style="font-size:var(--step-4)">step 4</p>
+      <h1 style="font-size:var(--step-5); margin:0;">step 5: page titles</h1>
+      <h1 style="font-size:var(--step-6); margin:0;">step 6: hero</h1>
+      <p class="mt-5" style="font-family:var(--font-mono);">--font-mono, used sparingly for labels, code and data</p>
+    </div>
+  </section>
+
+  <section class="raised">
+    <div class="wrap">
+      <h2>Components</h2>
+      <h3 class="mt-5">Buttons</h3>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#">Primary</a>
+        <a class="btn btn-ink" href="#">Ink</a>
+        <a class="btn btn-ghost" href="#">Ghost</a>
+      </div>
+
+      <h3 class="mt-7">Index card</h3>
+      <div class="grid cols-3 mt-3">
+        <article class="index-card">
+          <span class="cat cat-technical">Technical</span>
+          <h3>Example club card</h3>
+          <p class="desc">This is what a club/event card looks like with each category colour.</p>
+          <p class="meta"><span>Weekly, Somewhere</span></p>
+        </article>
+        <article class="index-card">
+          <span class="cat cat-cultural">Cultural</span>
+          <h3>Example club card</h3>
+          <p class="desc">Category colour changes; layout stays identical. No card is styled to look more important.</p>
+          <p class="meta"><span>Weekly, Somewhere</span></p>
+        </article>
+        <article class="index-card">
+          <span class="cat cat-sports">Sports</span>
+          <h3>Example club card</h3>
+          <p class="desc">Generated art block below stands in for a photo.</p>
+          <div class="art-block" data-seed="style-guide-demo" style="height:90px"></div>
+        </article>
+      </div>
+
+      <h3 class="mt-7">Notices</h3>
+      <div class="notice notice-info mt-3"><p>Info notice, used for placeholder-data disclosures.</p></div>
+      <div class="notice notice-warn mt-3"><p>Warning notice, reserve for anything urgent (e.g. a cancelled event).</p></div>
+    </div>
+  </section>
+</main>
+
+<div data-partial="footer"></div>
+<script src="assets/js/include-partials.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/accessibility-toolbar.js"></script>
+<script src="assets/js/visitor-counter.js"></script>
+</body>
+</html>

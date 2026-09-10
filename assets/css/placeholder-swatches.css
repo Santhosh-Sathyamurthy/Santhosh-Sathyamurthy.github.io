@@ -1,0 +1,43 @@
+/* =========================================================
+   PLACEHOLDER-SWATCHES.CSS
+   A small, self-contained "dummy" stylesheet whose only job is
+   to paint colour swatches for the internal style guide page.
+   It exists separately from tokens.css/components.css on
+   purpose: it's scratch space for previewing palette changes,
+   not part of the production component system. Safe to delete
+   once the real photography and final palette sign-off happen;
+   nothing else on the site depends on these classes.
+   ========================================================= */
+
+.swatch-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+@media (max-width: 780px){ .swatch-grid{ grid-template-columns: repeat(2, 1fr); } }
+
+.swatch{
+  height: 110px;
+  border-radius: 8px;
+  border: 1.5px solid var(--ink);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px 12px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+.swatch span{ font-weight: 600; }
+.swatch code{ opacity: .85; }
+
+/* Dummy fixed colours, independent of tokens.css, so this file
+   still shows something sensible even if it's ever previewed on
+   its own without the rest of the design system loaded. */
+.sw-ink{           background:#10182A; color:#F3F5EF; }
+.sw-paper{         background:#F3F5EF; color:#10182A; border-style:dashed; }
+.sw-paper-raised{  background:#FFFFFF; color:#10182A; }
+.sw-signal{        background:#F2A900; color:#402C00; }
+.sw-teal{          background:#0E6B5C; color:#FFFFFF; }
+.sw-flame{         background:#C7401F; color:#FFFFFF; }
+.sw-violet{        background:#5B4B8A; color:#FFFFFF; }
+.sw-focus{         background:#1758C9; color:#FFFFFF; }

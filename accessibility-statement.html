@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accessibility Statement | Council of Student Activities, IISER Tirupati</title>
+<meta name="description" content="This site's accessibility conformance level, known limitations, and how to report accessibility issues.">
+<meta name="author" content="PaCODEah, Tech Club, IISER Tirupati">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/utilities.css">
+<script>window.PAGE_ID = 'accessibility';</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div data-partial="header"></div>
+
+<main id="main-content" tabindex="-1">
+  <div class="wrap breadcrumb"><a href="index.html">Home</a> / <span aria-current="page">Accessibility Statement</span></div>
+  <section class="tight">
+    <div class="wrap-narrow">
+      <span class="kicker">Legal &amp; policy</span>
+      <h1 class="mt-2" style="font-size:var(--step-5);">Accessibility Statement</h1>
+
+      <h2 class="mt-7">Conformance status</h2>
+      <p>This site is designed and built to conform to <strong>WCAG 2.1 Level AA</strong>, as required by GIGW 3.0 (Guidelines for Indian Government Websites and Apps) and the Rights of Persons with Disabilities Act, 2016. "Conformance" means we have targeted these standards throughout design and development; it has not yet been through a third-party STQC accessibility audit, which we recommend before this site goes live on the institute's domain.</p>
+
+      <h2 class="mt-7">What we've built in</h2>
+      <ul style="padding-left:20px; color:var(--ink-80);">
+        <li style="margin-bottom:8px;">A "Skip to main content" link on every page for keyboard and screen-reader users.</li>
+        <li style="margin-bottom:8px;">Visible keyboard focus on every interactive element, never removed with <code>outline:none</code>.</li>
+        <li style="margin-bottom:8px;">Text resize controls (A / A+ / A++) and a dark-mode toggle in the utility bar, both remembered across pages.</li>
+        <li style="margin-bottom:8px;">Colour is never the only signal: category tags carry text labels alongside colour coding.</li>
+        <li style="margin-bottom:8px;">All colour pairings used for text meet a 4.5:1 contrast ratio (3:1 for large text).</li>
+        <li style="margin-bottom:8px;"><code>prefers-reduced-motion</code> is respected sitewide, and no content relies on hover-only interaction.</li>
+        <li style="margin-bottom:8px;">Forms have explicit <code>&lt;label&gt;</code>s, grouped <code>&lt;fieldset&gt;</code>s, and validation errors that are announced, not just shown in colour.</li>
+        <li>Semantic landmarks (<code>header</code>, <code>nav</code>, <code>main</code>, <code>footer</code>) and a logical heading structure on every page.</li>
+      </ul>
+
+      <h2 class="mt-7">Known limitations</h2>
+      <p>We believe in disclosing gaps rather than hiding them:</p>
+      <ul style="padding-left:20px; color:var(--ink-80);">
+        <li style="margin-bottom:8px;">The generated pattern art standing in for club/event photography is decorative and marked as such to screen readers, but has not been tested with real assistive-technology users.</li>
+        <li style="margin-bottom:8px;">This build has not yet had a formal screen-reader pass with NVDA/JAWS/VoiceOver or a manual keyboard-only walkthrough by someone with a disability. Both are recommended before launch (see the UX4G Handbook's Build-stage accessibility testing guidance).</li>
+        <li style="margin-bottom:8px;">Multilingual support (Hindi/Telugu, as offered on the main institute site) is not yet implemented here.</li>
+        <li>Navigation and footer currently require JavaScript (see "Technical specifications" below), and this should be moved to a server-side include before production deployment.</li>
+      </ul>
+
+      <h2 class="mt-7">Feedback</h2>
+      <p>If you encounter an accessibility barrier on this site, please tell us through the <a href="contact.html">contact form</a> (choose "Something else" and mention "Accessibility"), or by email at <a href="mailto:studentactivities@iisertirupati.ac.in">studentactivities@iisertirupati.ac.in</a>. Please include the page URL and, if possible, the assistive technology you were using; we aim to acknowledge reports within 5 working days.</p>
+
+      <h2 class="mt-7">Technical specifications</h2>
+      <p>Accessibility relies on the following technologies: HTML5, CSS3 (with custom properties), and JavaScript. Each page's own content (headings, text, forms) is present in the HTML source and readable without JavaScript. The header, footer and navigation, however, are loaded via JavaScript from shared partial files for maintainability (see <code>assets/js/include-partials.js</code>), so a visitor with JavaScript disabled will not currently see the site's navigation or footer. This is a known trade-off, listed here rather than hidden: before this site is deployed on the institute's production server, we recommend moving the header/footer include to a server-side mechanism (the server's templating system, PHP includes, or a static-site build step) so navigation works with JavaScript off, while keeping the same "edit it in one place" benefit for maintainers.</p>
+    </div>
+  </section>
+</main>
+
+<div data-partial="footer"></div>
+<script src="assets/js/include-partials.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/accessibility-toolbar.js"></script>
+<script src="assets/js/visitor-counter.js"></script>
+</body>
+</html>

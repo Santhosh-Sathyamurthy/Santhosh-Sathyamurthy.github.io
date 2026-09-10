@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42" role="img" aria-label="Council of Student Activities mark">
+  <rect x="1" y="1" width="40" height="40" rx="6" fill="#F3F5EF" stroke="#10182A" stroke-width="2"/>
+  <circle cx="9" cy="9" r="2.4" fill="#F3F5EF" stroke="#10182A" stroke-width="1.4"/>
+  <path d="M13 28 L21 12 L29 28" fill="none" stroke="#10182A" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+  <rect x="16.5" y="22" width="9" height="3" fill="#F2A900"/>
+</svg>

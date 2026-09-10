@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Council | Council of Student Activities, IISER Tirupati</title>
+<meta name="description" content="How the Council of Student Activities is structured, elected and governed at IISER Tirupati, and the site-wide policy against favouring any one club.">
+<meta name="author" content="PaCODEah, Tech Club, IISER Tirupati">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/utilities.css">
+<script>window.PAGE_ID = 'council';</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div data-partial="header"></div>
+
+<main id="main-content" tabindex="-1">
+  <div class="wrap breadcrumb"><a href="index.html">Home</a> / <span aria-current="page">Council</span></div>
+
+  <section class="tight">
+    <div class="wrap-narrow">
+      <span class="kicker">Governance</span>
+      <h1 class="mt-2" style="font-size:var(--step-5);">The Council of Student Activities</h1>
+      <p class="lede" style="font-size:1.05rem;">The Council is the elected student body that coordinates every club at IISER Tirupati, allocating budgets, resolving venue and date clashes, and representing student activities to the institute administration.</p>
+    </div>
+  </section>
+
+  <section class="raised">
+    <div class="wrap-narrow">
+      <h2>How it's structured</h2>
+      <p>Five sub-councils sit under the main Council, one per category of club activity. Each sub-council has one coordinator, elected by the clubs within it, who sits on the main Council.</p>
+      <div class="grid cols-2 mt-5">
+        <div class="index-card">
+          <span class="cat" style="color:var(--flame)">Elected</span>
+          <h3>General Secretary, Student Activities</h3>
+          <p class="desc">Chairs the Council, casts the deciding vote on shared-resource disputes, and is the point of contact with the Dean of Student Affairs.</p>
+          <p class="meta"><span>Elected annually by the student body</span></p>
+        </div>
+        <div class="index-card">
+          <span class="cat" style="color:var(--teal)">Elected</span>
+          <h3>Five Sub-council Coordinators</h3>
+          <p class="desc">One per category (Cultural, Literary &amp; Media, Social &amp; Wellness, Sports, Technical), elected by the clubs in that category.</p>
+          <p class="meta"><span>Elected each semester</span></p>
+        </div>
+      </div>
+      <div class="notice notice-info mt-5" role="note">
+        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1a9 9 0 100 18 9 9 0 000-18zm1 14H9v-6h2zm0-8H9V5h2z"/></svg>
+        <p>Names of the current office-bearers will be published here once the ongoing election cycle concludes, rather than being placeholder-filled with invented names.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="neutrality">
+    <div class="wrap-narrow">
+      <span class="kicker">Site policy</span>
+      <h2 class="mt-2">No club is favoured on this site</h2>
+      <p>This is a stated, checkable policy for anyone maintaining this site after us, not a one-off promise:</p>
+      <ul style="padding-left:22px; color:var(--ink-80); max-width:64ch;">
+        <li style="margin-bottom:10px;"><strong>Ordering.</strong> Councils are listed alphabetically everywhere (Cultural, Literary &amp; Media, Social &amp; Wellness, Sports, Technical). Clubs are listed alphabetically within their council. Events are listed strictly by date. There is no "featured" flag anywhere in the underlying data.</li>
+        <li style="margin-bottom:10px;"><strong>Homepage spotlight.</strong> The three-club preview on the homepage shows one club per council and rotates which club is shown, using the day of the year as a seed, so it changes daily but stays fully deterministic and auditable, never a manual pick.</li>
+        <li style="margin-bottom:10px;"><strong>Imagery.</strong> No club gets a real photo while others get a placeholder. Every club currently gets the same generated pattern art until real photos are supplied for all of them at once.</li>
+        <li style="margin-bottom:10px;"><strong>Event scheduling.</strong> Venue and date clashes are resolved first-submitted-first-held, or by a joint slot, never by club size or funding.</li>
+        <li><strong>Changing this policy.</strong> Any change to the ordering or selection logic in <code>clubs-render.js</code> or <code>events-render.js</code> should be raised with the full Council, not made unilaterally by whoever is maintaining the site that semester.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="raised" id="constitution">
+    <div class="wrap-narrow">
+      <span class="kicker">Governing document</span>
+      <h2 class="mt-2">Constitution, in brief</h2>
+      <p>The full constitution is held by the institute administration; this is a plain-language summary for students.</p>
+      <div class="accordion mt-5">
+        <div class="accordion-item">
+          <h3><button class="accordion-trigger" aria-expanded="true" aria-controls="acc-1" id="acc-1-trigger">Who can start a club? <span class="plus">&minus;</span></button></h3>
+          <div class="accordion-panel" id="acc-1" role="region" aria-labelledby="acc-1-trigger">
+            <p>Any group of at least ten registered students, with a named convenor and a faculty advisor, can apply. See the <a href="contact.html">start-a-club form</a>.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3><button class="accordion-trigger" aria-expanded="false" aria-controls="acc-2" id="acc-2-trigger">How is budget allocated? <span class="plus">+</span></button></h3>
+          <div class="accordion-panel" id="acc-2" role="region" aria-labelledby="acc-2-trigger" hidden>
+            <p>Each sub-council receives an equal base allocation per semester, split further by clubs' submitted activity plans rather than by club size or past spending.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3><button class="accordion-trigger" aria-expanded="false" aria-controls="acc-3" id="acc-3-trigger">How are disputes between clubs resolved? <span class="plus">+</span></button></h3>
+          <div class="accordion-panel" id="acc-3" role="region" aria-labelledby="acc-3-trigger" hidden>
+            <p>Venue, date or budget disputes go to the relevant sub-council coordinator first, and to the General Secretary if unresolved. Decisions are logged and available to any club on request.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3><button class="accordion-trigger" aria-expanded="false" aria-controls="acc-4" id="acc-4-trigger">How do I raise a concern about this website itself? <span class="plus">+</span></button></h3>
+          <div class="accordion-panel" id="acc-4" role="region" aria-labelledby="acc-4-trigger" hidden>
+            <p>Use the <a href="contact.html">contact form</a> or the accessibility feedback channel listed on the <a href="accessibility-statement.html">Accessibility Statement</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div data-partial="footer"></div>
+
+<script src="assets/js/include-partials.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/accessibility-toolbar.js"></script>
+<script src="assets/js/visitor-counter.js"></script>
+</body>
+</html>

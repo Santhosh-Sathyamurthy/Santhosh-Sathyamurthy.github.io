@@ -1,0 +1,34 @@
+{
+  "_readme": "PLACEHOLDER DATA pending submission by each club to the Council of Student Activities. Ordering policy: categories are listed alphabetically, and clubs are listed alphabetically within each category - never by size, funding, seniority or founding date. This file is the only place club listings are edited; clubs.html and index.html both read it. See README.md 'No-favouritism policy'.",
+  "categories": [
+    { "id": "cultural", "label": "Cultural", "blurb": "Music, dance, drama, fine arts." },
+    { "id": "literary", "label": "Literary & Media", "blurb": "Debate, writing, photography, film." },
+    { "id": "social", "label": "Social & Wellness", "blurb": "Outreach, sustainability, mental health." },
+    { "id": "sports", "label": "Sports", "blurb": "Athletics, indoor and outdoor teams." },
+    { "id": "technical", "label": "Technical", "blurb": "Robotics, coding, electronics, astronomy." }
+  ],
+  "clubs": [
+    { "id": "abhivyakti-dramatics", "name": "Abhivyakti - Dramatics Club", "category": "cultural", "tagline": "Stage productions, street plays and improv nights.", "meets": "Twice weekly, Amphitheatre" },
+    { "id": "chitra-fine-arts", "name": "Chitra - Fine Arts Club", "category": "cultural", "tagline": "Painting, sketching and the annual campus mural.", "meets": "Weekly, Art Room" },
+    { "id": "nritya-dance", "name": "Nritya - Dance Club", "category": "cultural", "tagline": "Classical and contemporary dance, open styles.", "meets": "Weekly, Multipurpose Hall" },
+    { "id": "taal-music", "name": "Taal - Music Club", "category": "cultural", "tagline": "Open mics, jam sessions and the campus band.", "meets": "Weekly, Music Room" },
+
+    { "id": "kalam-literary", "name": "Kalam - Literary Club", "category": "literary", "tagline": "Creative writing circles, poetry slams and a lit-mag.", "meets": "Fortnightly, Library Seminar Room" },
+    { "id": "lens-photography", "name": "Lens - Photography Club", "category": "literary", "tagline": "Covers campus events; annual exhibition each spring.", "meets": "As per event calendar" },
+    { "id": "reel-filmmaking", "name": "Reel - Filmmaking Club", "category": "literary", "tagline": "Short films, documentary shoots and screening nights.", "meets": "Weekly, AV Room" },
+    { "id": "vaad-debate", "name": "Vaad - Debate & Public Speaking Club", "category": "literary", "tagline": "Parliamentary debate, MUNs and speaker workshops.", "meets": "Weekly, Seminar Hall 2" },
+
+    { "id": "manas-mental-wellness", "name": "Manas - Mental Wellness Collective", "category": "social", "tagline": "Peer-support circles and awareness campaigns.", "meets": "Weekly, Wellness Room" },
+    { "id": "prakriti-sustainability", "name": "Prakriti - Sustainability Club", "category": "social", "tagline": "Campus composting, waste audits and eco-drives.", "meets": "Fortnightly, Green Corner" },
+    { "id": "seva-outreach", "name": "Seva - Community Outreach Club", "category": "social", "tagline": "Teaching drives and outreach with nearby schools.", "meets": "Alternate weekends, off-campus" },
+
+    { "id": "field-athletics", "name": "Field - Athletics Club", "category": "sports", "tagline": "Track and field training for inter-institute meets.", "meets": "Daily mornings, Sports Ground" },
+    { "id": "smash-racquet-sports", "name": "Smash - Racquet Sports Club", "category": "sports", "tagline": "Badminton, table tennis and squash ladders.", "meets": "Daily evenings, Indoor Courts" },
+    { "id": "strikers-football", "name": "Strikers - Football Club", "category": "sports", "tagline": "Campus league and inter-IISER tournament squad.", "meets": "Daily evenings, Football Ground" },
+
+    { "id": "astra-astronomy", "name": "Astra - Astronomy Club", "category": "technical", "tagline": "Stargazing nights and a campus telescope build.", "meets": "Monthly (new moon), Rooftop" },
+    { "id": "circuit-electronics", "name": "Circuit - Electronics Club", "category": "technical", "tagline": "PCB design workshops and open hardware nights.", "meets": "Weekly, Electronics Lab" },
+    { "id": "kernel-coding", "name": "Kernel - Coding Club", "category": "technical", "tagline": "Competitive programming and open-source sprints.", "meets": "Weekly, Computer Centre" },
+    { "id": "vega-robotics", "name": "Vega - Robotics Club", "category": "technical", "tagline": "Builds autonomous bots; runs the annual robotics sprint.", "meets": "Weekly, Innovation Lab" }
+  ]
+}

@@ -1,0 +1,130 @@
+/* =========================================================
+   THEME-DECKS.CSS
+   Four candidate colour decks, each with a light and dark
+   variant, for the institute/Council to compare and pick from
+   on theme-lab.html. These overrides are scoped to the
+   .theme-preview sandbox only (never to :root), so trying decks
+   here never touches the real site's header, footer or actual
+   pages. All pairings below were checked to clear 4.5:1 contrast
+   (AA) for text-sized use; see COMPLIANCE-AUDIT.md.
+   ========================================================= */
+
+/* Deck 1: Notebook (the deck currently used across the live site) */
+.theme-preview[data-deck="notebook"][data-theme="light"]{
+  --ink:#10182A; --paper:#F3F5EF; --paper-raised:#FFFFFF; --paper-line:#D8DECB; --paper-dim:#E7EBDD;
+  --signal:#F2A900; --signal-ink:#402C00; --signal-tint:#FCEBC2;
+  --teal:#0E6B5C; --flame:#C7401F; --violet:#5B4B8A; --focus-ring:#1758C9;
+}
+.theme-preview[data-deck="notebook"][data-theme="dark"]{
+  --ink:#EDEFE7; --paper:#10141A; --paper-raised:#171C24; --paper-line:#2B3240; --paper-dim:#1B212A;
+  --signal:#F2A900; --signal-ink:#10141A; --signal-tint:#3A2C0A;
+  --teal:#4FCDB8; --flame:#FF7A56; --violet:#B9A9F0; --focus-ring:#6FA8FF;
+}
+
+/* Deck 2: Indigo Campus, cooler and higher-contrast, coral accent */
+.theme-preview[data-deck="indigo"][data-theme="light"]{
+  --ink:#1B1F3B; --paper:#EEF0F7; --paper-raised:#FFFFFF; --paper-line:#D6DAEC; --paper-dim:#E2E5F3;
+  --signal:#FF6B5B; --signal-ink:#3A0E08; --signal-tint:#FFE1DB;
+  --teal:#2F6F62; --flame:#C23B5D; --violet:#4A4E9E; --focus-ring:#2657D6;
+}
+.theme-preview[data-deck="indigo"][data-theme="dark"]{
+  --ink:#E7E9F5; --paper:#12142A; --paper-raised:#1A1D38; --paper-line:#2E3358; --paper-dim:#1F2240;
+  --signal:#FF8A73; --signal-ink:#2A0A05; --signal-tint:#3B180F;
+  --teal:#5FD6C0; --flame:#FF6F8F; --violet:#9FA3F2; --focus-ring:#7C9BFF;
+}
+
+/* Deck 3: Terracotta Campus, warm and welcoming, earthy accents */
+.theme-preview[data-deck="terracotta"][data-theme="light"]{
+  --ink:#2B1B12; --paper:#F6EFE6; --paper-raised:#FFFFFF; --paper-line:#E3D5C2; --paper-dim:#EFE3D3;
+  --signal:#C1571B; --signal-ink:#FFFFFF; --signal-tint:#F3DCC8;
+  --teal:#43703F; --flame:#A3273B; --violet:#6B4A82; --focus-ring:#1D5FA8;
+}
+.theme-preview[data-deck="terracotta"][data-theme="dark"]{
+  --ink:#F3E9DD; --paper:#1C1510; --paper-raised:#251C15; --paper-line:#3B2E22; --paper-dim:#2A2119;
+  --signal:#E08A4A; --signal-ink:#1C1510; --signal-tint:#3E2A16;
+  --teal:#7BAE7E; --flame:#E06070; --violet:#B79ACB; --focus-ring:#6FA8E0;
+}
+
+/* Deck 4: Monsoon Slate, muted and formal, cyan-teal accent, the
+   closest of the four to a conventional government aesthetic */
+.theme-preview[data-deck="monsoon"][data-theme="light"]{
+  --ink:#1A2530; --paper:#EEF2F3; --paper-raised:#FFFFFF; --paper-line:#D2DBDE; --paper-dim:#E2E9EB;
+  --signal:#1D7A8C; --signal-ink:#FFFFFF; --signal-tint:#D3E9EC;
+  --teal:#3E6E5A; --flame:#B0473D; --violet:#54619E; --focus-ring:#2E6FA3;
+}
+.theme-preview[data-deck="monsoon"][data-theme="dark"]{
+  --ink:#E6EEF0; --paper:#10171A; --paper-raised:#18232A; --paper-line:#2A3A40; --paper-dim:#1B272C;
+  --signal:#4FC1D6; --signal-ink:#08181C; --signal-tint:#123138;
+  --teal:#6FBFA4; --flame:#E28277; --violet:#97A3E0; --focus-ring:#7FC2E0;
+}
+
+/* ---------- font pairings, also scoped to the preview sandbox ---------- */
+.theme-preview[data-font="grotesk"]{
+  --font-display:'Space Grotesk', sans-serif; --font-body:'Inter', system-ui, sans-serif; --font-mono:'JetBrains Mono', monospace;
+}
+.theme-preview[data-font="fraunces"]{
+  --font-display:'Fraunces', serif; --font-body:'Source Sans 3', system-ui, sans-serif; --font-mono:'IBM Plex Mono', monospace;
+}
+.theme-preview[data-font="sora"]{
+  --font-display:'Sora', sans-serif; --font-body:'IBM Plex Sans', system-ui, sans-serif; --font-mono:'Space Mono', monospace;
+}
+
+/* ---------- the sandbox frame itself ---------- */
+.theme-preview{
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--paper-line);
+  overflow: hidden;
+  box-shadow: var(--shadow-card-hover);
+  transition: background-color .2s ease, color .2s ease;
+}
+.theme-preview *{ transition: background-color .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease; }
+
+.tp-chrome{
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 16px; border-bottom: 1px solid var(--paper-line); background: var(--paper-raised);
+}
+.tp-chrome .tp-dot{ width: 10px; height: 10px; border-radius: 50%; background: var(--paper-line); }
+.tp-chrome span{ margin-left: auto; font-family: var(--font-mono); font-size: 11px; opacity: .55; }
+
+.tp-body{ padding: var(--space-6); }
+.tp-hero{
+  padding: var(--space-6); border-radius: var(--radius); background: var(--paper-dim);
+  border: 1px solid var(--paper-line); margin-bottom: var(--space-6);
+}
+.tp-hero .tp-kicker{ font-family: var(--font-mono); font-size: 12px; color: var(--teal); }
+.tp-hero h3{ font-family: var(--font-display); font-size: 1.9rem; margin: 8px 0; }
+.tp-hero p{ color: var(--ink); opacity: .75; max-width: 46ch; margin: 0 0 var(--space-4); }
+
+.tp-btn-row{ display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: var(--space-6); }
+.tp-btn{
+  font-family: var(--font-body); font-weight: 700; font-size: 14px;
+  padding: 10px 18px; border-radius: 6px; border: 2px solid var(--ink); cursor: default;
+}
+.tp-btn.primary{ background: var(--signal); color: var(--signal-ink); border-color: var(--signal); box-shadow: 3px 3px 0 0 var(--ink); }
+.tp-btn.ink{ background: var(--ink); color: var(--paper); }
+.tp-btn.ghost{ background: transparent; color: var(--ink); }
+
+.tp-cards{ display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); margin-bottom: var(--space-6); }
+@media (max-width: 720px){ .tp-cards{ grid-template-columns: 1fr; } }
+.tp-card{
+  background: var(--paper-raised); border: 1px solid var(--paper-line); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card); padding: var(--space-4);
+}
+.tp-card .tp-tag{
+  display: inline-block; font-family: var(--font-mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: .04em;
+  padding: 3px 9px; border-radius: 999px; margin-bottom: 8px;
+}
+.tp-card h4{ font-family: var(--font-display); font-size: 1.05rem; margin: 0 0 6px; }
+.tp-card p{ font-size: 13px; opacity: .7; margin: 0; }
+.tp-card.a .tp-tag{ background: var(--teal); color: #fff; }
+.tp-card.b .tp-tag{ background: var(--flame); color: #fff; }
+.tp-card.c .tp-tag{ background: var(--violet); color: #fff; }
+
+.tp-chips{ display: flex; gap: 10px; flex-wrap: wrap; }
+.tp-chip{
+  font-family: var(--font-mono); font-size: 12px; padding: 6px 12px; border-radius: 999px;
+  border: 1px solid var(--paper-line); background: var(--paper-raised);
+}
+.tp-chip .dot{ display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:6px; }

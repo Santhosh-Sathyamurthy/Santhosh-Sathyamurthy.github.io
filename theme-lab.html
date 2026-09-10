@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Theme Lab (internal) | Council of Student Activities, IISER Tirupati</title>
+<meta name="description" content="Try different colour decks, font pairings and light/dark mode before picking a final direction for the site. Not linked from the public nav.">
+<meta name="robots" content="noindex">
+<meta name="author" content="PaCODEah, Tech Club, IISER Tirupati">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/utilities.css">
+<link rel="stylesheet" href="assets/css/theme-decks.css">
+<!-- Extra typefaces used only by the alternate font pairings on this
+     sandbox page. The live site pages only ever load the three
+     fonts referenced in tokens.css, so this import is kept local
+     to theme-lab.html rather than added to every page's weight. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Sora:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap">
+<script>window.PAGE_ID = '';</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div data-partial="header"></div>
+
+<main id="main-content" tabindex="-1">
+  <section class="tight">
+    <div class="wrap">
+      <span class="kicker">Internal, not in main nav</span>
+      <h1 class="mt-2" style="font-size:var(--step-5);">Theme lab</h1>
+      <p class="lede" style="font-size:1rem;">Four colour decks and three font pairings to try before settling on a final look, each with its own light and dark mode. Every combination shown here already clears WCAG AA contrast, so whichever one the Council picks is safe to ship as-is. Switching things below only changes the preview panel, not the real header, footer or the rest of this site.</p>
+    </div>
+  </section>
+
+  <section class="raised">
+    <div class="wrap">
+
+      <div class="grid cols-3" style="align-items:start; margin-bottom:var(--space-6);">
+        <div>
+          <h3 style="font-size:1rem; margin-bottom:10px;">Colour deck</h3>
+          <div class="filter-bar" data-deck-group role="group" aria-label="Choose a colour deck" style="margin-bottom:0;">
+            <button type="button" data-value="notebook" aria-pressed="true">Notebook</button>
+            <button type="button" data-value="indigo" aria-pressed="false">Indigo Campus</button>
+            <button type="button" data-value="terracotta" aria-pressed="false">Terracotta Campus</button>
+            <button type="button" data-value="monsoon" aria-pressed="false">Monsoon Slate</button>
+          </div>
+        </div>
+        <div>
+          <h3 style="font-size:1rem; margin-bottom:10px;">Font pairing</h3>
+          <div class="filter-bar" data-font-group role="group" aria-label="Choose a font pairing" style="margin-bottom:0;">
+            <button type="button" data-value="grotesk" aria-pressed="true">Modern Technical</button>
+            <button type="button" data-value="fraunces" aria-pressed="false">Editorial Warm</button>
+            <button type="button" data-value="sora" aria-pressed="false">Clean Geometric</button>
+          </div>
+        </div>
+        <div>
+          <h3 style="font-size:1rem; margin-bottom:10px;">Appearance</h3>
+          <div class="filter-bar" data-mode-group role="group" aria-label="Choose light or dark" style="margin-bottom:0;">
+            <button type="button" data-value="light" aria-pressed="true">Light</button>
+            <button type="button" data-value="dark" aria-pressed="false">Dark</button>
+          </div>
+        </div>
+      </div>
+      <p class="visually-hidden" role="status" data-theme-lab-status></p>
+
+      <div class="theme-preview" data-deck="notebook" data-font="grotesk" data-theme="light">
+        <div class="tp-chrome">
+          <span class="tp-dot"></span><span class="tp-dot"></span><span class="tp-dot"></span>
+          <span>preview, council-of-student-activities.example</span>
+        </div>
+        <div class="tp-body">
+          <div class="tp-hero">
+            <span class="tp-kicker">Council of Student Activities</span>
+            <h3>Every club and event, one home.</h3>
+            <p>This block previews the hero, buttons, cards and chips together so a colour deck and font pairing can be judged as a whole page, not as isolated swatches.</p>
+            <div class="tp-btn-row">
+              <span class="tp-btn primary">Browse clubs</span>
+              <span class="tp-btn ink">Start a club</span>
+              <span class="tp-btn ghost">Contact</span>
+            </div>
+          </div>
+
+          <div class="tp-cards">
+            <div class="tp-card a">
+              <span class="tp-tag">Technical</span>
+              <h4>Kernel, Coding Club</h4>
+              <p>Competitive programming and open-source sprints, weekly at the Computer Centre.</p>
+            </div>
+            <div class="tp-card b">
+              <span class="tp-tag">Sports</span>
+              <h4>Strikers Football Club</h4>
+              <p>Campus league fixtures and the inter-IISER tournament squad.</p>
+            </div>
+            <div class="tp-card c">
+              <span class="tp-tag">Literary &amp; Media</span>
+              <h4>Vaad, Debate Club</h4>
+              <p>Parliamentary debate, MUNs and speaker workshops each fortnight.</p>
+            </div>
+          </div>
+
+          <div class="tp-chips">
+            <span class="tp-chip"><span class="dot" style="background:var(--teal)"></span>Technical</span>
+            <span class="tp-chip"><span class="dot" style="background:var(--flame)"></span>Sports</span>
+            <span class="tp-chip"><span class="dot" style="background:var(--violet)"></span>Literary &amp; Media</span>
+            <span class="tp-chip"><span class="dot" style="background:var(--signal)"></span>Cultural</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap-narrow">
+      <h2>Notes for whoever picks the final one</h2>
+      <ul style="padding-left:20px; color:var(--ink-80);">
+        <li style="margin-bottom:8px;"><strong>Notebook</strong> is what's currently live across the site: a cool paper background with a notice-board yellow accent, built around the "index card" idea.</li>
+        <li style="margin-bottom:8px;"><strong>Indigo Campus</strong> reads a little more energetic and tech-forward, with a coral accent against deep indigo.</li>
+        <li style="margin-bottom:8px;"><strong>Terracotta Campus</strong> is the warmest option, closer to a lot of Indian college fest branding, with a burnt-orange accent on cream.</li>
+        <li style="margin-bottom:8px;"><strong>Monsoon Slate</strong> is the most restrained of the four, closest to a typical formal government site, with a slate-teal accent.</li>
+        <li>All four ship with working dark mode. Switching deck, font or mode here doesn't change anything outside this preview box: to make one of these the site's real theme, its values move from <code>theme-decks.css</code> into <code>tokens.css</code>.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<div data-partial="footer"></div>
+<script src="assets/js/include-partials.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/accessibility-toolbar.js"></script>
+<script src="assets/js/visitor-counter.js"></script>
+<script src="assets/js/theme-lab.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | Council of Student Activities, IISER Tirupati</title>
+<meta name="description" content="Campus life at IISER Tirupati across clubs and events, currently placeholder imagery pending real photo submissions.">
+<meta name="author" content="PaCODEah, Tech Club, IISER Tirupati">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/utilities.css">
+<script>window.PAGE_ID = 'gallery';</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div data-partial="header"></div>
+
+<main id="main-content" tabindex="-1">
+  <div class="wrap breadcrumb"><a href="index.html">Home</a> / <span aria-current="page">Gallery</span></div>
+
+  <section class="tight">
+    <div class="wrap">
+      <span class="kicker">Campus life</span>
+      <h1 class="mt-2" style="font-size:var(--step-5);">Gallery</h1>
+      <p class="lede" style="font-size:1rem;">This site ships without stock photography we don't hold rights to. Every tile below is a generated placeholder, seeded from the event name, standing in until clubs submit real photos through the <a href="contact.html">contact form</a>. At that point every tile is replaced together, not one at a time.</p>
+
+      <div class="filter-bar mt-7" data-filter-bar role="group" aria-label="Filter gallery by council">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="cultural" aria-pressed="false">Cultural</button>
+        <button type="button" data-filter="literary" aria-pressed="false">Literary &amp; Media</button>
+        <button type="button" data-filter="social" aria-pressed="false">Social &amp; Wellness</button>
+        <button type="button" data-filter="sports" aria-pressed="false">Sports</button>
+        <button type="button" data-filter="technical" aria-pressed="false">Technical</button>
+      </div>
+      <p class="visually-hidden" role="status" data-filter-status></p>
+
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Each figure is an independent gallery item; JS fills each
+             .art-block with a deterministic generated pattern. -->
+      </div>
+    </div>
+  </section>
+</main>
+
+<div data-partial="footer"></div>
+
+<script src="assets/js/include-partials.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/accessibility-toolbar.js"></script>
+<script src="assets/js/visitor-counter.js"></script>
+<script>
+  // Gallery items are generated directly here (rather than a JSON
+  // file) since this is placeholder art, not real editable data.
+  // Once real photos exist, replace this block with an <img> per
+  // figure and drop the data-seed/art-block approach.
+  var GALLERY_ITEMS = [
+    { seed: 'prakriti-fest-2025', label: 'Prakriti Fest 2025: opening night', cat: 'cultural' },
+    { seed: 'taal-open-mic', label: 'Taal open mic, monsoon semester', cat: 'cultural' },
+    { seed: 'nritya-showcase', label: 'Nritya annual showcase', cat: 'cultural' },
+    { seed: 'vaad-mun-2025', label: 'Campus Model UN, 2025', cat: 'literary' },
+    { seed: 'lens-exhibition', label: 'Lens annual photo exhibition', cat: 'literary' },
+    { seed: 'kalam-poetry-slam', label: 'Kalam poetry slam', cat: 'literary' },
+    { seed: 'seva-outreach-drive', label: 'Seva school outreach drive', cat: 'social' },
+    { seed: 'prakriti-eco-drive', label: 'Prakriti Sustainability eco-drive', cat: 'social' },
+    { seed: 'manas-wellness-week', label: 'Manas wellness week', cat: 'social' },
+    { seed: 'athletics-meet-2025', label: 'Inter-batch athletics meet, 2025', cat: 'sports' },
+    { seed: 'strikers-league-final', label: 'Strikers campus league final', cat: 'sports' },
+    { seed: 'smash-ladder-finals', label: 'Smash racquet ladder finals', cat: 'sports' },
+    { seed: 'circuit-robotics-sprint', label: 'Circuit robotics build sprint', cat: 'technical' },
+    { seed: 'astra-stargazing', label: 'Astra stargazing night', cat: 'technical' },
+    { seed: 'kernel-hack-night', label: 'Kernel open-source hack night', cat: 'technical' },
+    { seed: 'vega-bot-race', label: 'Vega autonomous bot race', cat: 'technical' }
+  ];
+  var grid = document.getElementById('gallery-grid');
+  grid.innerHTML = GALLERY_ITEMS.map(function (item) {
+    return '<figure class="gallery-item" data-category="' + item.cat + '">' +
+      '<div class="art-block" data-seed="' + item.seed + '" data-label="' + item.label + '" style="height:120px"></div>' +
+      '<figcaption>' + item.label + '</figcaption>' +
+    '</figure>';
+  }).join('');
+  if (window.COSA && window.COSA.reinitAfterRender) window.COSA.reinitAfterRender();
+</script>
+</body>
+</html>

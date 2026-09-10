@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clubs | Council of Student Activities, IISER Tirupati</title>
+<meta name="description" content="Every registered club at IISER Tirupati, organised by council. Listed alphabetically, with no club featured above another.">
+<meta name="author" content="PaCODEah, Tech Club, IISER Tirupati">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/utilities.css">
+<script>window.PAGE_ID = 'clubs';</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div data-partial="header"></div>
+
+<main id="main-content" tabindex="-1">
+  <div class="wrap breadcrumb"><a href="index.html">Home</a> / <span aria-current="page">Clubs</span></div>
+
+  <section class="tight">
+    <div class="wrap">
+      <span class="kicker">18+ registered clubs</span>
+      <h1 class="mt-2" style="font-size:var(--step-5);">Every club, one directory</h1>
+      <p class="lede" style="font-size:1rem;">Clubs are grouped under the council they belong to. Within a council, and across councils, the order is always alphabetical, never by size, funding history or how long a club has existed. Read the full <a href="council.html#neutrality">neutrality policy</a>.</p>
+
+      <div class="notice notice-info mt-5" role="note">
+        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1a9 9 0 100 18 9 9 0 000-18zm1 14H9v-6h2zm0-8H9V5h2z"/></svg>
+        <p>Placeholder data: club taglines and meeting details shown here are examples pending confirmation from each club. Once your club submits real details through the <a href="contact.html">contact form</a>, they replace the placeholder in <code>data/clubs.json</code>.</p>
+      </div>
+
+      <div class="filter-bar mt-7" data-filter-bar role="group" aria-label="Filter clubs by council">
+        <button type="button" data-filter="all" aria-pressed="true">All clubs</button>
+      </div>
+      <p class="visually-hidden" role="status" data-filter-status></p>
+
+      <div class="grid cols-3" data-clubs-list aria-live="polite">
+        <p>Loading clubs&hellip;</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div data-partial="footer"></div>
+
+<script src="assets/js/include-partials.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/accessibility-toolbar.js"></script>
+<script src="assets/js/visitor-counter.js"></script>
+<script src="assets/js/clubs-render.js"></script>
+<script>
+  // If arriving via a #category link from the homepage chip row,
+  // pre-select that filter once the directory has rendered.
+  document.addEventListener('clubs:rendered', function () {
+    var hash = window.location.hash.replace('#', '');
+    if (!hash) return;
+    var btn = document.querySelector('[data-filter-bar] [data-filter="' + hash + '"]');
+    if (btn) btn.click();
+  });
+</script>
+</body>
+</html>

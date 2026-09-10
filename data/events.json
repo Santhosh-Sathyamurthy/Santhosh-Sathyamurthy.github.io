@@ -1,0 +1,12 @@
+{
+  "_readme": "PLACEHOLDER DATA pending confirmation from each club/council. Ordering policy: strictly chronological by date - the only ordering that makes sense for a calendar and carries no risk of favouring one club over another.",
+  "events": [
+    { "id": "athletics-meet", "name": "Inter-Batch Athletics Meet", "category": "sports", "host": "Field - Athletics Club", "date": "2026-09-28", "dateLabel": "28 Sep 2026", "venue": "Sports Ground", "blurb": "Track and field events across all batches." },
+    { "id": "circuit-sprint", "name": "Circuit - Robotics Build Sprint", "category": "technical", "host": "Vega - Robotics Club", "date": "2026-10-02", "dateLabel": "2 Oct 2026", "venue": "Innovation Lab", "blurb": "24-hour build challenge for autonomous line-following bots." },
+    { "id": "open-mic-autumn", "name": "Open Mic Night - Autumn Edition", "category": "cultural", "host": "Taal - Music Club", "date": "2026-10-11", "dateLabel": "11 Oct 2026", "venue": "Amphitheatre", "blurb": "Open floor for music, poetry and stand-up." },
+    { "id": "vaad-mun", "name": "Campus Model UN", "category": "literary", "host": "Vaad - Debate & Public Speaking Club", "date": "2026-10-18", "dateLabel": "18 Oct 2026", "venue": "Seminar Hall 2", "blurb": "One-day MUN simulation open to all batches." },
+    { "id": "eco-drive", "name": "Campus Waste Audit & Eco-Drive", "category": "social", "host": "Prakriti - Sustainability Club", "date": "2026-10-25", "dateLabel": "25 Oct 2026", "venue": "Across campus", "blurb": "A day of waste segregation audits and a cleanup drive." },
+    { "id": "prakriti-fest", "name": "Prakriti Fest - Annual Cultural Fest", "category": "cultural", "host": "Council of Student Activities", "date": "2026-11-14", "dateLabel": "14\u201316 Nov 2026", "venue": "Main Amphitheatre", "blurb": "Three days of music, dance, art and design competitions, open to teams from across the region." },
+    { "id": "astro-night", "name": "Stargazing Night", "category": "technical", "host": "Astra - Astronomy Club", "date": "2026-12-01", "dateLabel": "1 Dec 2026 (new moon)", "venue": "Rooftop Observation Deck", "blurb": "Telescope viewing session, open to the whole campus." }
+  ]
+}
